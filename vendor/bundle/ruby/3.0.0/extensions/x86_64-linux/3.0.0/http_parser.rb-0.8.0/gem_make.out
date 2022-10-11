@@ -1,0 +1,16 @@
+current directory: /home/arjun/ICCP_Science Dropbox/ICCP_Science Team Folder/Arjun/website/website/nbarjun/nbarjun.github.io/vendor/bundle/ruby/3.0.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+/usr/bin/ruby -I /usr/lib/ruby/3.0.0 extconf.rb
+creating Makefile
+
+current directory: /home/arjun/ICCP_Science Dropbox/ICCP_Science Team Folder/Arjun/website/website/nbarjun/nbarjun.github.io/vendor/bundle/ruby/3.0.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20221004-17743-nca61e sitelibdir\=./.gem.20221004-17743-nca61e clean
+
+current directory: /home/arjun/ICCP_Science Dropbox/ICCP_Science Team Folder/Arjun/website/website/nbarjun/nbarjun.github.io/vendor/bundle/ruby/3.0.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20221004-17743-nca61e sitelibdir\=./.gem.20221004-17743-nca61e
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /home/arjun/ICCP_Science Dropbox/ICCP_Science Team Folder/Arjun/website/website/nbarjun/nbarjun.github.io/vendor/bundle/ruby/3.0.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20221004-17743-nca61e sitelibdir\=./.gem.20221004-17743-nca61e install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20221004-17743-nca61e
