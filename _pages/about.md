@@ -1,6 +1,6 @@
 ---
-permalink: _pages/about/
-title: ""
+permalink: /
+title: "Arjun"
 excerpt: "About me"
 author_profile: true
 redirect_from:
