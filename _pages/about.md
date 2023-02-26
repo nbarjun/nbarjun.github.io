@@ -10,8 +10,8 @@ redirect_from:
 
 Simple Visualizations using blender and high resolution climate models.
 
-<video width="320" height="240" autoplay>
-  <source src="files/cropped_vid.mp4" type="video/mp4">
+<video width="500px" height="500px" autoplay>
+  <source src="files/vid.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
