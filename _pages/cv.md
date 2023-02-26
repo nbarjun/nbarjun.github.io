@@ -9,17 +9,17 @@ redirect_from:
 
 {% include base_path %}
 
-# EMPLOYABLE SKILLS
-======
+### EMPLOYABLE SKILLS
 * Technical experience: climate modeling, statistical & numerical methods, big data, machine learning, HPC
 * Communication: proposal writing, cross-cultural communication, 5 spoken languages
 * Passions: climate crisis, water and food security, sustainable development, coding, scientific visualization
 * Policy interests: climate action, justice & reparations, democratizing scientific and technological innovation
 
-# EDUCATION
-======
+### EDUCATION
 Pusan National University, Busan, South Korea (2017 – Present)
+
 **GPA 4.25**
+
 Ph.D. Candidate in Dept. of Climate System
 * Two-year course work included, thesis and proposal writing, cloud microphysics, remote sensing, ENSO dynamics and modeling etc.
 * Completion of the Ph.D. program requires defense of the doctoral thesis titled “Flavors and characteristics of atmospheric rivers of past, present, and future”.
