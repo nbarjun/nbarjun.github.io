@@ -16,7 +16,7 @@ Your browser does not support the video tag.
 </video> -->
 
 <div class="video">
-<video width="500px" height="500px" controls="controls"/>
+<video width="800px" autoplay>
 <source src="/vid.mp4" type="video/mp4">
 </video>
 </div>
