@@ -20,7 +20,6 @@ Your browser does not support the video tag.
 </video> -->
 <video width=100% preload="auto" muted loop>
   <source src="vid.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 
 
