@@ -84,12 +84,12 @@ author:
   name             : "Arjun"
   avatar           : "prof_pic.jpeg"
   bio              : "An early career climate scientist. I work on the detection of extreme weather events and their response to changing climates."
-  location         : "Location"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  location         : "https://www.google.com/maps/place/Busan/data=!3m1!4b1!4m6!3m5!1s0x3568eb6de823cd35:0x35d8cb74247108a7!8m2!3d35.1795543!4d129.0756416!16zL20vMGh2N2w"
+  employer         : "https://ibsclimate.org/"
+  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  googlescholar    : "https://scholar.google.com/citations?user=UXUeTo0AAAAJ&hl=en"
   email            : "arjunbabun11@gmail.com"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : "https://www.researchgate.net/profile/Arjun-Nellikkattil"
   uri              :
   bitbucket        :
   codepen          :
@@ -97,17 +97,17 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "https://github.com/nbarjun"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/nbarjun/"
   orcid            : "http://orcid.org/0000-0003-0302-182X"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : "https://stackoverflow.com/users/21290614/arjun"
   steam            :
   tumblr           :
   twitter          : "replacethistwitterhandle"
