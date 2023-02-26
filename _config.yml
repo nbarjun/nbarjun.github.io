@@ -84,8 +84,8 @@ author:
   name             : "Arjun"
   avatar           : "prof_pic.jpeg"
   bio              : "An early career climate scientist. I work on the detection of extreme weather events and their response to changing climates."
-  location         : "Busan"
-  employer         : <a href="https://ibsclimate.org/">IBS Center for Climate Physics</a>
+  location         : #"Busan"
+  employer         : IBS Center for Climate Physics
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=UXUeTo0AAAAJ&hl=en"
   email            : "arjunbabun11@gmail.com"
@@ -110,7 +110,7 @@ author:
   stackoverflow    : "https://stackoverflow.com/users/21290614/arjun"
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : #"replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
