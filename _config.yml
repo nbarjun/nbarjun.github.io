@@ -8,10 +8,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Arjun Nellikkattil"
+title                    : "Arjun Babu Nellikkattil"
 title_separator          : "-"
-name                     : &name "Test"
-description              : &description "personal description"
+name                     : &name "Arjun"
+description              : &An early career climate scientist. I work on the detection of extreme weather events and their response to changing climates."
 url                      : https://nbarjun.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "nbarjun/nbarjun.github.io"
