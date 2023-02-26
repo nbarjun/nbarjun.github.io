@@ -14,3 +14,7 @@ Simple Visualizations using blender and high resolution climate models.
   <source src="files/cropped_vid.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+
+Requirements to make the video
+- High Resolution data
+- Blender 
