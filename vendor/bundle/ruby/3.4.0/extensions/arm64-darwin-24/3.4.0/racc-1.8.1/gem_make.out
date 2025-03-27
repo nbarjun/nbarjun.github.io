@@ -1,0 +1,18 @@
+current directory: /Users/an1009/Library/CloudStorage/GoogleDrive-an1009@georgetown.edu/My Drive/Professional/GitHub/nbarjun.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/an1009/.rbenv/versions/3.4.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/an1009/Library/CloudStorage/GoogleDrive-an1009@georgetown.edu/My Drive/Professional/GitHub/nbarjun.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250326-95698-bwr1ks sitelibdir\=./.gem.20250326-95698-bwr1ks clean
+
+current directory: /Users/an1009/Library/CloudStorage/GoogleDrive-an1009@georgetown.edu/My Drive/Professional/GitHub/nbarjun.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250326-95698-bwr1ks sitelibdir\=./.gem.20250326-95698-bwr1ks
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/an1009/Library/CloudStorage/GoogleDrive-an1009@georgetown.edu/My Drive/Professional/GitHub/nbarjun.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250326-95698-bwr1ks sitelibdir\=./.gem.20250326-95698-bwr1ks install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250326-95698-bwr1ks/racc
+
+current directory: /Users/an1009/Library/CloudStorage/GoogleDrive-an1009@georgetown.edu/My Drive/Professional/GitHub/nbarjun.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250326-95698-bwr1ks sitelibdir\=./.gem.20250326-95698-bwr1ks clean
