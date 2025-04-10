@@ -2,9 +2,9 @@
 title: "Increased amplitude of atmospheric rivers and associated extreme precipitation in ultra-high-resolution greenhouse warming simulations"
 collection: publications
 category: manuscripts
-permalink: /publication/2023-08-06-Increased_amplitude_of_atmospheric_rivers
+permalink: /publication/2023-09-06-Increased_amplitude_of_atmospheric_rivers
 excerpt: 'Atmospheric rivers are expected to become more frequent and intense with rising CO₂ levels, contributing more to global precipitation and extreme rainfall events. These changes have significant implications for future water management and adaptation strategies.'
-date: 2023-08-06
+date: 2023-09-06
 venue: 'Communications Earth & Environment'
 # slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
 paperurl: 'https://www.nature.com/articles/s43247-023-00963-7'
