@@ -371,3 +371,1169 @@
 [I 2025-02-17 22:57:24.756 ServerApp] Starting buffering for 2ec6f11b-8fe2-4ec9-b0dd-248a977ee5a0:2e12cb69-ffaf-4cf0-b574-196cfd30bad5
 [I 2025-02-17 22:57:24.777 ServerApp] Starting buffering for fc2d722f-5c38-48f4-b682-04d61f805b74:d2dc821c-beb9-4a1f-afb7-a0769bda359b
 [I 2025-02-17 22:57:24.792 ServerApp] Starting buffering for 3d496df6-c02c-4f2d-838f-582e319b539d:c1ea824d-e4f0-4de2-bd0c-04cb3b78a820
+[I 2025-04-17 11:05:51.020 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-04-17 11:05:51.021 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-04-17 11:05:51.023 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-04-17 11:05:51.024 ServerApp] notebook | extension was successfully linked.
+[I 2025-04-17 11:05:51.219 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-04-17 11:05:51.247 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-04-17 11:05:51.248 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-04-17 11:05:51.249 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-04-17 11:05:51.250 LabApp] JupyterLab extension loaded from /Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab
+[I 2025-04-17 11:05:51.250 LabApp] JupyterLab application directory is /Users/an1009/miniconda3/envs/pytor/share/jupyter/lab
+[I 2025-04-17 11:05:51.250 LabApp] Extension Manager is 'pypi'.
+[I 2025-04-17 11:05:51.258 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-04-17 11:05:51.259 ServerApp] notebook | extension was successfully loaded.
+[I 2025-04-17 11:05:51.260 ServerApp] Serving notebooks from local directory: /Volumes
+[I 2025-04-17 11:05:51.260 ServerApp] Jupyter Server 2.14.1 is running at:
+[I 2025-04-17 11:05:51.260 ServerApp] http://localhost:8999/lab
+[I 2025-04-17 11:05:51.260 ServerApp]     http://127.0.0.1:8999/lab
+[I 2025-04-17 11:05:51.260 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2025-04-17 11:05:51.271 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2025-04-17 11:05:51.629 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:05:51.635 ServerApp] 403 GET /api/contents/Macintosh%20HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer?content=1&hash=0&1744902351621 (@::1) 7.51ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:05:56.434 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:05:56.436 ServerApp] 403 GET /api/kernels/8d9672b4-04d6-49b0-a0dc-1f5d9853e98a?1744902356428 (@::1) 3.68ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:05:56.447 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:05:56.450 ServerApp] 403 GET /api/kernels?1744902356442 (@::1) 3.41ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:05:57.698 ServerApp] Couldn't authenticate WebSocket connection
+[W 2025-04-17 11:05:57.725 ServerApp] 403 GET /api/events/subscribe (@::1) 28.83ms referer=None
+[W 2025-04-17 11:05:58.378 LabApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:05:58.380 LabApp] 403 GET /lab/api/workspaces?1744902358372 (@::1) 3.02ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:01.644 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:01.646 ServerApp] 403 GET /api/contents/Macintosh%20HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer?content=1&hash=0&1744902361639 (@::1) 2.54ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:02.447 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:02.448 ServerApp] 403 GET /api/kernels/8c13891f-13af-4af9-b670-4fa6d25c7ab4?1744902362441 (@::1) 2.60ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:02.457 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:02.458 ServerApp] 403 GET /api/kernels?1744902362453 (@::1) 2.49ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:04.481 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:04.482 ServerApp] 403 GET /api/kernels/4823da2d-ac03-488b-8fb5-0b4de58147fc?1744902364476 (@::1) 2.54ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:04.491 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:04.493 ServerApp] 403 GET /api/kernels?1744902364488 (@::1) 2.20ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:04.518 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:04.519 ServerApp] 403 GET /api/kernels?1744902364514 (@::1) 2.37ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:05.761 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:05.762 ServerApp] 403 GET /api/kernels?1744902365755 (@::1) 2.66ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[E 2025-04-17 11:06:11.636 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1298, in send_error
+        self.write_error(status_code, **kwargs)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 741, in write_error
+        html = self.render_template("error.html", **ns)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 667, in render_template
+        return template.render(**ns)
+               ^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+        self.environment.handle_exception()
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/templates/error.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/templates/page.html", line 9, in top-level template code
+        {% block favicon %}<link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ static_url("favicon.ico") }}">
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/templates/page.html", line 9, in block 'favicon'
+        {% block favicon %}<link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ static_url("favicon.ico") }}">
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/extension/handler.py", line 118, in static_url
+        raise Exception(msg) from None
+    Exception: This extension doesn't have any static paths listed. Check that the extension's `static_paths` trait is set.
+[W 2025-04-17 11:06:11.642 TerminalsExtensionApp] 403 GET /terminals/websocket/1 (@::1) 11.47ms referer=None
+[W 2025-04-17 11:06:11.653 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:11.654 ServerApp] 403 GET /api/contents/Macintosh%20HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer?content=1&hash=0&1744902371649 (@::1) 1.76ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:13.187 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:13.188 ServerApp] 403 GET /api/kernels?1744902373181 (@::1) 2.54ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:13.471 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:13.473 ServerApp] 403 GET /api/kernels/4e067121-d401-4c48-949f-61c90fdcd8e5?1744902373464 (@::1) 3.34ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:13.477 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:13.478 ServerApp] 403 GET /api/kernels?1744902373476 (@::1) 1.02ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:16.237 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:16.239 ServerApp] 403 GET /api/me?1744902376232 (@::1) 2.61ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:17.405 LabApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:17.407 LabApp] 403 GET /lab/api/workspaces?1744902377399 (@::1) 2.89ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:17.918 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:17.920 ServerApp] 403 GET /api/kernels?1744902377912 (@::1) 2.95ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[W 2025-04-17 11:06:21.665 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+              ^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 783, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2025-04-17 11:06:21.666 ServerApp] 403 GET /api/contents/Macintosh%20HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer?content=1&hash=0&1744902381658 (@::1) 2.91ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:06:24.562 LabApp] 302 GET /lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb (@::1) 0.91ms
+[I 2025-04-17 11:06:32.227 ServerApp] User 8e7e7f321e1e4123a0c1df449f39ef90 logged in.
+[I 2025-04-17 11:06:32.227 ServerApp] 302 POST /login?next=%2Flab%2Ftree%2FMacintosh%2520HD%2FUsers%2Fan1009%2FEcommons%2FAnalysis%2Fmgprs%2Fprecip_covariance.ipynb (8e7e7f321e1e4123a0c1df449f39ef90@::1) 83.49ms
+[W 2025-04-17 11:06:32.763 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-04-17 11:06:33.246 ServerApp] New terminal with automatic name: 1
+[I 2025-04-17 11:06:33.878 ServerApp] Kernel started: 347fac54-ae88-41fa-8393-f3b08a0ff0b9
+[I 2025-04-17 11:06:33.883 ServerApp] Kernel started: 6fb71a0c-11b0-4e6c-b340-015e44d65513
+[I 2025-04-17 11:06:33.886 ServerApp] Kernel started: ceda745a-bcd3-428e-b4c1-7b818a4fb79b
+[I 2025-04-17 11:06:33.893 ServerApp] Kernel started: 426bd46c-ed13-43cf-b48c-ea3d70b2403c
+[I 2025-04-17 11:06:35.734 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 11:06:35.843 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 11:06:35.982 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:38d1acee-a188-4ae8-9303-6207f621c10b
+[I 2025-04-17 11:06:36.216 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 11:06:36.786 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 11:06:36.802 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:a237e97c-4af6-4428-be36-e1503f10b4e1
+[I 2025-04-17 11:06:37.366 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 11:06:37.635 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 11:08:33.657 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:10:33.832 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:12:33.987 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:14:34.156 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:16:34.309 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:18:34.687 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:22:36.681 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:26:37.689 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:32:39.656 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 11:34:39.814 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-17 12:37:58.899 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3dfe91f4-21c2-431c-85bd-e8e76b540006
+[I 2025-04-17 12:37:58.911 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:a8f359dd-8d29-47a3-b4ec-4ceb0da27f39
+[I 2025-04-17 12:37:58.912 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:a46c5cf3-f96f-4fb3-9419-d3e12475f1cb
+[I 2025-04-17 12:37:58.916 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:5a53320f-9bc1-4d50-8146-f0a867a61b11
+[I 2025-04-17 12:37:58.954 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 12:37:58.955 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3dfe91f4-21c2-431c-85bd-e8e76b540006
+[I 2025-04-17 12:37:58.971 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 12:37:58.971 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:a8f359dd-8d29-47a3-b4ec-4ceb0da27f39
+[I 2025-04-17 12:37:59.000 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 12:37:59.001 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:a46c5cf3-f96f-4fb3-9419-d3e12475f1cb
+[I 2025-04-17 12:37:59.044 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 12:37:59.045 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:5a53320f-9bc1-4d50-8146-f0a867a61b11
+[I 2025-04-17 13:23:03.175 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/llutilities.py
+[I 2025-04-17 13:23:20.399 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:25:20.537 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:26:18.316 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:26:28.208 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:26:37.266 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:26:43.502 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:27:20.669 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:27:52.188 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:28:45.961 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:28:56.726 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:28:59.418 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:29:20.766 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:30:29.564 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:30:47.084 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:31:12.687 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:31:25.931 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:31:28.023 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:32:29.692 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:36:29.825 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:38:29.956 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:39:16.221 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:39:28.059 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:39:46.544 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:39:47.596 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:40:18.664 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:40:30.076 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:40:57.225 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:42:01.586 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py
+[I 2025-04-17 13:42:30.199 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:48:30.330 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:50:30.462 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:51:09.822 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_smoothed.py
+[I 2025-04-17 13:52:31.410 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:53:59.981 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_smoothed.py
+[I 2025-04-17 13:54:31.523 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:56:31.658 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 13:58:31.788 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:00:31.915 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:02:32.040 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:04:32.173 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:04:42.390 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 14:04:49.776 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 14:06:32.303 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:08:32.435 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:12:32.559 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:14:32.680 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:18:32.814 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:20:32.954 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:22:33.106 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:24:33.236 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:28:33.368 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:34:33.487 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:36:33.630 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:40:33.782 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:42:33.895 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:44:34.042 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:46:34.155 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:48:34.280 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:50:34.413 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:52:34.543 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:54:34.657 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 14:57:50.750 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 14:58:34.765 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:00:34.894 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:02:35.007 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:04:35.130 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:06:35.295 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:08:35.403 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:10:35.515 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:12:35.648 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:18:37.428 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:20:37.567 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:21:19.069 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:23:19.205 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:25:19.317 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:27:19.487 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:29:19.600 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:33:20.429 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:39:22.414 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:41:22.538 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:43:22.652 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:47:22.780 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:49:22.932 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:50:02.387 ServerApp] Copying Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb to /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime
+[I 2025-04-17 15:50:20.174 ServerApp] Kernel started: e072fc79-6a99-4c0b-bbd8-24bddd065951
+[I 2025-04-17 15:50:20.768 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 15:51:23.090 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 15:51:46.298 ServerApp] Kernel started: f5905edf-d7e4-4f2e-bc82-07b1d35418e3
+[I 2025-04-17 15:51:46.802 ServerApp] Connecting to kernel f5905edf-d7e4-4f2e-bc82-07b1d35418e3.
+[I 2025-04-17 15:52:20.006 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_old_10yrs.ipynb
+[I 2025-04-17 15:54:20.104 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_old_10yrs.ipynb
+[I 2025-04-17 15:56:20.206 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_old_10yrs.ipynb
+[I 2025-04-17 15:58:20.313 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_old_10yrs.ipynb
+[I 2025-04-17 15:58:54.074 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_old_10yrs.ipynb
+[I 2025-04-17 15:58:59.116 ServerApp] Starting buffering for f5905edf-d7e4-4f2e-bc82-07b1d35418e3:36fea7e0-9132-4997-bb58-df146a6d5aaf
+[I 2025-04-17 16:03:10.519 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:03:26.622 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:03:28.269 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:07:26.755 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:09:26.872 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:25:27.428 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:27:27.535 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:29:02.897 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:30:43.360 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:30:44.962 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3dfe91f4-21c2-431c-85bd-e8e76b540006
+[I 2025-04-17 16:30:44.963 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:a8f359dd-8d29-47a3-b4ec-4ceb0da27f39
+[I 2025-04-17 16:30:44.964 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:a46c5cf3-f96f-4fb3-9419-d3e12475f1cb
+[I 2025-04-17 16:30:44.965 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:5a53320f-9bc1-4d50-8146-f0a867a61b11
+[I 2025-04-17 16:30:44.966 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:0fabe594-0b24-4a94-b2f8-ebdd85a250ba
+[I 2025-04-17 16:30:45.420 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 16:30:45.433 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 16:30:45.447 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 16:30:45.466 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 16:30:45.470 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:a9d1551e-10bf-4fe1-b061-c800cb01815a
+[W 2025-04-17 16:30:45.478 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2025-04-17 16:30:45.479 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 16:30:45.491 ServerApp] Connecting to kernel f5905edf-d7e4-4f2e-bc82-07b1d35418e3.
+[I 2025-04-17 16:30:45.517 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:0cddcfa8-782e-4888-be7c-8049e93e099e
+[I 2025-04-17 16:30:45.517 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:90945be7-8bec-4597-bfb8-7a457ea7fe17
+[I 2025-04-17 16:30:45.518 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:d0aeec48-e67b-4137-912e-b43bcc35e1ad
+[I 2025-04-17 16:30:45.583 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:a9c663a3-92bf-4f3d-8914-f45f960fe335
+[I 2025-04-17 16:30:45.583 ServerApp] Starting buffering for f5905edf-d7e4-4f2e-bc82-07b1d35418e3:fea90a44-ac70-4f4d-8523-ae6e62b6b4b5
+[I 2025-04-17 16:30:46.536 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 16:30:46.552 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 16:30:46.564 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 16:30:46.581 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 16:30:46.594 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 16:32:45.971 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:33:07.724 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:35:07.839 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:37:07.957 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:39:07.040 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 16:39:08.089 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:41:08.267 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:42:58.909 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:44:59.019 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:46:59.144 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:47:58.375 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:49:59.572 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:51:59.696 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:53:59.809 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:55:59.920 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 16:58:00.059 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:00:00.189 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:02:00.362 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:02:33.630 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:04:33.748 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:05:59.746 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:07:59.871 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:10:00.000 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:12:00.137 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:13:25.050 ServerApp] Kernel interrupted: 426bd46c-ed13-43cf-b48c-ea3d70b2403c
+[I 2025-04-17 17:13:25.187 ServerApp] Kernel interrupted: 426bd46c-ed13-43cf-b48c-ea3d70b2403c
+[I 2025-04-17 17:14:00.253 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:16:00.363 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:18:00.525 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:20:01.504 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:24:02.501 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:26:02.620 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:26:12.441 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 17:27:58.459 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 17:28:02.746 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:30:02.870 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:32:02.988 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:32:38.323 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:34:38.440 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:36:38.562 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:38:38.679 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:40:38.799 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:41:53.991 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:43:54.111 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:43:58.512 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 17:45:08.386 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 17:45:54.230 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:47:54.353 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:49:03.864 ServerApp] Kernel interrupted: 426bd46c-ed13-43cf-b48c-ea3d70b2403c
+[I 2025-04-17 17:49:04.025 ServerApp] Kernel interrupted: 426bd46c-ed13-43cf-b48c-ea3d70b2403c
+[I 2025-04-17 17:49:54.468 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:51:54.615 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:53:54.722 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:55:54.846 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:56:28.320 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 17:56:30.538 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 17:58:31.515 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 18:42:20.516 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 18:43:58.436 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 18:43:58.444 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 18:43:58.450 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 18:43:58.468 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 18:43:58.514 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 18:43:58.550 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 18:43:58.551 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 18:43:58.579 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 18:43:58.580 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 18:43:58.602 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 18:43:58.602 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 18:43:58.665 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 18:43:58.665 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 18:43:58.824 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 18:43:58.824 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 21:01:23.439 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:02:41.643 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:03:13.769 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 21:03:13.769 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 21:03:13.770 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 21:03:13.770 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 21:03:13.770 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 21:03:13.788 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 21:03:13.788 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 21:03:13.811 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 21:03:13.812 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 21:03:13.829 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 21:03:13.829 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 21:03:13.930 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 21:03:13.931 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 21:03:13.971 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 21:03:13.977 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 21:09:44.982 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:11:45.083 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:13:26.118 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:13:46.210 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:13:46.610 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:13:53.232 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:13:53.510 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:13:59.544 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:15:26.235 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:17:26.360 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:19:00.622 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:20:59.645 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:21:00.732 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:23:00.852 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:25:00.978 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:26:05.253 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:26:29.621 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:26:41.802 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:27:51.663 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:28:08.543 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:29:02.952 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:29:11.406 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:29:51.931 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:29:58.609 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:30:24.308 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 21:31:52.027 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:33:52.135 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:35:52.252 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:37:52.368 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 21:39:39.539 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 21:39:39.552 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 21:39:39.553 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 21:39:39.553 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 21:39:39.554 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 21:39:39.557 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 21:39:39.557 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 21:39:39.600 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 21:39:39.600 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 21:39:39.612 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 21:39:39.612 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 21:39:39.626 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 21:39:39.627 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 21:39:39.661 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 21:39:39.661 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 22:08:51.188 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 22:09:07.137 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-17 22:09:10.480 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 22:11:07.717 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 22:11:55.376 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 22:13:55.470 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 22:15:09.690 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_smoothed.py
+[I 2025-04-17 22:15:55.591 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 22:17:56.226 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:13:25.793 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 23:13:25.806 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 23:13:25.809 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 23:13:25.812 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 23:13:25.819 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 23:13:25.848 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 23:13:25.848 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 23:13:25.864 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 23:13:25.864 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 23:13:25.973 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 23:13:25.973 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 23:13:26.004 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 23:13:26.004 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 23:13:26.112 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 23:13:26.112 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 23:29:07.852 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 23:29:07.863 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 23:29:07.863 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 23:29:07.864 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 23:29:07.864 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 23:29:07.866 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 23:29:07.867 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 23:29:07.884 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 23:29:07.884 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 23:29:07.932 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 23:29:07.932 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 23:29:07.954 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 23:29:07.954 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 23:29:08.075 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 23:29:08.075 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 23:30:24.441 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:30:56.837 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:31:51.119 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-17 23:32:56.921 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:33:47.517 ServerApp] Kernel started: a26aed6d-bddd-4873-b417-db6fc124e8a4
+[I 2025-04-17 23:33:48.143 ServerApp] Connecting to kernel a26aed6d-bddd-4873-b417-db6fc124e8a4.
+[I 2025-04-17 23:34:18.047 ServerApp] Starting buffering for a26aed6d-bddd-4873-b417-db6fc124e8a4:32623dd5-78b8-4b59-8319-f8c70c2720d9
+[I 2025-04-17 23:34:57.016 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:35:09.980 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:36:39.497 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:38:39.608 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:40:39.722 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:44:39.836 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:45:08.774 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:45:34.706 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:47:34.804 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:49:34.901 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-17 23:57:21.466 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 23:57:21.469 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 23:57:21.474 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 23:57:21.475 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 23:57:21.477 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-17 23:57:21.513 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-17 23:57:21.513 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-17 23:57:21.527 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-17 23:57:21.527 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-17 23:57:21.538 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-17 23:57:21.538 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-17 23:57:21.625 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-17 23:57:21.625 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-17 23:57:21.710 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-17 23:57:21.710 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-18 00:03:05.167 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 00:05:05.275 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 00:07:48.284 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-18 00:07:51.214 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_hybrid.py
+[I 2025-04-18 00:09:05.378 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 00:09:16.148 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-18 00:09:16.151 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-18 00:09:16.160 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-18 00:09:16.160 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-18 00:09:16.160 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 00:09:16.162 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-18 00:09:16.162 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-18 00:09:16.206 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-18 00:09:16.207 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-18 00:09:16.222 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-18 00:09:16.222 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-18 00:09:16.267 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-18 00:09:16.267 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-18 00:09:16.325 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-18 00:09:16.325 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 05:09:10.840 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 09:31:32.940 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 09:33:33.026 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 09:35:33.170 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 09:35:58.516 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 09:35:58.530 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-18 09:35:58.531 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-18 09:35:58.531 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-18 09:35:58.532 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-18 09:35:58.547 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-18 09:35:58.548 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 09:35:58.576 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-18 09:35:58.576 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-18 09:35:58.590 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-18 09:35:58.590 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-18 09:35:58.692 ServerApp] Connecting to kernel e072fc79-6a99-4c0b-bbd8-24bddd065951.
+[I 2025-04-18 09:35:58.692 ServerApp] Restoring connection for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-18 09:35:58.760 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-18 09:35:58.760 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-18 10:21:28.077 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:31:29.095 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:33:29.211 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:35:29.318 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:35:41.398 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:37:41.503 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:39:02.147 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:41:02.262 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:42:11.029 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:42:17.445 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 10:42:41.600 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:06:20.095 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:06:29.806 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:08:29.891 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:14:30.003 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:16:31.020 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:17:58.973 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:18:50.949 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:20:51.036 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:21:37.243 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:23:14.976 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:23:28.183 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:25:28.286 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:29:28.386 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:31:28.486 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:33:28.574 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:39:28.966 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:41:29.075 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:43:29.185 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:45:29.273 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:47:29.350 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 11:51:29.426 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:13:29.728 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:15:29.828 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:17:29.912 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:31:30.042 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:33:30.149 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:35:30.242 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:37:31.130 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:39:31.231 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:41:31.332 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:43:31.433 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:44:02.346 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:46:02.439 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:48:02.526 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:50:02.627 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:50:18.643 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:50:25.487 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:52:25.587 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:54:25.678 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:56:25.780 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 12:58:25.888 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 13:00:25.974 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 13:01:02.175 ServerApp] Copying Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/rainseer/ModelSpecificMGPR.py to /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer
+[I 2025-04-18 13:02:48.404 ServerApp] Starting buffering for e072fc79-6a99-4c0b-bbd8-24bddd065951:ae4510aa-6386-421e-b44c-af75cb3f7030
+[I 2025-04-18 13:02:57.261 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:04:37.991 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:04:54.985 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:06:55.017 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:08:43.241 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:09:40.251 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:10:27.713 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:11:30.319 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:11:36.978 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:11:51.560 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:12:05.047 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:39:12.963 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:48:09.614 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:48:16.389 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:49:09.203 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 13:50:11.249 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:50:45.194 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:51:09.298 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 13:51:16.469 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 13:53:09.395 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:00:57.539 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:01:09.513 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:02:34.720 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:02:42.738 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:03:09.613 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:03:22.402 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:03:22.893 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:03:23.193 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:04:45.021 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:05:06.095 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:05:09.711 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[E 2025-04-18 14:06:05.841 ServerApp] Uncaught exception GET /lab/api/extensions?query&page=2&per_page=30&refresh=0&1744999565825 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8999', method='GET', uri='/lab/api/extensions?query&page=2&per_page=30&refresh=0&1744999565825', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 37, in get
+        extensions, last_page = await self.manager.list_extensions(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/manager.py", line 474, in list_extensions
+        await self.refresh(query, page, per_page)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/manager.py", line 508, in refresh
+        await self._update_extensions_list(query, page, per_page)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/manager.py", line 681, in _update_extensions_list
+        extensions, last_page = await self.list_packages(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/pypi.py", line 261, in list_packages
+        matches = await self.__get_all_extensions()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/pypi.py", line 315, in __get_all_extensions
+        self.__all_packages_cache = await self.__throttleRequest(
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/pypi.py", line 214, in __throttleRequest
+        data = await current_loop.run_in_executor(None, fn, *args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+        result = self.fn(*self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1122, in __call__
+        return self.__send(self.__name, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1461, in __request
+        response = self.__transport.request(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1166, in request
+        return self.single_request(host, handler, request_body, verbose)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1178, in single_request
+        http_conn = self.send_request(host, handler, request_body, verbose)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1291, in send_request
+        self.send_content(connection, request_body)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1321, in send_content
+        connection.endheaders(request_body)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/http/client.py", line 1331, in endheaders
+        self._send_output(message_body, encode_chunked=encode_chunked)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/http/client.py", line 1091, in _send_output
+        self.send(msg)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/http/client.py", line 1055, in send
+        self.sock.sendall(data)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/ssl.py", line 1210, in sendall
+        v = self.send(byte_view[count:])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/ssl.py", line 1179, in send
+        return self._sslobj.write(data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+    ssl.SSLError: [SYS] unknown error (_ssl.c:2417)
+[W 2025-04-18 14:06:05.851 ServerApp] wrote error: 'Unhandled error'
+    Traceback (most recent call last):
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+        result = await result
+                 ^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 37, in get
+        extensions, last_page = await self.manager.list_extensions(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/manager.py", line 474, in list_extensions
+        await self.refresh(query, page, per_page)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/manager.py", line 508, in refresh
+        await self._update_extensions_list(query, page, per_page)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/manager.py", line 681, in _update_extensions_list
+        extensions, last_page = await self.list_packages(query, page, per_page)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/pypi.py", line 261, in list_packages
+        matches = await self.__get_all_extensions()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/pypi.py", line 315, in __get_all_extensions
+        self.__all_packages_cache = await self.__throttleRequest(
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/site-packages/jupyterlab/extensions/pypi.py", line 214, in __throttleRequest
+        data = await current_loop.run_in_executor(None, fn, *args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+        result = self.fn(*self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1122, in __call__
+        return self.__send(self.__name, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1461, in __request
+        response = self.__transport.request(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1166, in request
+        return self.single_request(host, handler, request_body, verbose)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1178, in single_request
+        http_conn = self.send_request(host, handler, request_body, verbose)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1291, in send_request
+        self.send_content(connection, request_body)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/xmlrpc/client.py", line 1321, in send_content
+        connection.endheaders(request_body)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/http/client.py", line 1331, in endheaders
+        self._send_output(message_body, encode_chunked=encode_chunked)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/http/client.py", line 1091, in _send_output
+        self.send(msg)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/http/client.py", line 1055, in send
+        self.sock.sendall(data)
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/ssl.py", line 1210, in sendall
+        v = self.send(byte_view[count:])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/Users/an1009/miniconda3/envs/pytor/lib/python3.12/ssl.py", line 1179, in send
+        return self._sslobj.write(data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+    ssl.SSLError: [SYS] unknown error (_ssl.c:2417)
+[E 2025-04-18 14:06:05.852 ServerApp] {
+      "Host": "localhost:8999",
+      "Accept": "*/*",
+      "Referer": "http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+    }
+[E 2025-04-18 14:06:05.852 ServerApp] 500 GET /lab/api/extensions?query&page=2&per_page=30&refresh=0&1744999565825 (8e7e7f321e1e4123a0c1df449f39ef90@::1) 23.84ms referer=http://localhost:8999/lab/tree/Macintosh%20HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:06:06.432 ServerApp] Kernel restarted: 426bd46c-ed13-43cf-b48c-ea3d70b2403c
+[I 2025-04-18 14:06:06.437 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 14:06:06.439 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-18 14:06:06.439 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 14:06:23.598 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:06:33.412 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:08:33.515 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:08:57.618 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:09:01.469 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-18 14:09:15.633 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:10:04.518 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:12:04.634 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:12:47.580 ServerApp] Kernel started: 33da374f-e3b9-4143-a139-33aa0f0bd8a6
+[I 2025-04-18 14:12:48.243 ServerApp] Connecting to kernel 33da374f-e3b9-4143-a139-33aa0f0bd8a6.
+[I 2025-04-18 14:14:04.751 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:16:04.828 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:18:04.962 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:22:05.086 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:26:05.184 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:28:05.283 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:30:05.400 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:36:05.515 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:38:05.630 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:40:05.743 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:42:05.842 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:42:58.913 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:43:52.187 ServerApp] Copying Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/LocationSpecificUGPR.py to /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer
+[I 2025-04-18 14:44:25.622 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 14:44:59.035 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:45:01.258 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 14:45:08.563 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 14:45:13.757 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 14:45:16.903 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 14:46:59.157 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:48:59.281 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 14:58:59.400 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:00:24.849 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:00:59.527 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:01:26.537 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:02:59.646 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:08:45.083 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:08:48.898 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:08:49.856 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:09:01.953 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:09:03.006 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:09:03.277 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:10:05.263 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:10:08.472 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/temporal_mul.py
+[I 2025-04-18 15:10:59.776 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:12:59.925 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:14:02.059 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:14:16.256 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:15:35.846 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:15:49.875 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:16:06.216 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:16:19.941 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:16:24.197 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:16:36.709 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:16:46.686 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-18 15:17:55.048 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:18:07.848 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:20:07.973 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:32:08.122 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:34:08.320 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:38:08.438 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:42:08.550 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:44:08.651 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 15:46:08.795 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-18 18:44:28.906 ServerApp] Starting buffering for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-18 18:44:28.933 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-18 18:44:28.933 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-18 18:44:28.933 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 18:44:28.934 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-18 18:44:28.936 ServerApp] Connecting to kernel 33da374f-e3b9-4143-a139-33aa0f0bd8a6.
+[I 2025-04-18 18:44:28.936 ServerApp] Restoring connection for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-18 18:44:28.994 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-18 18:44:28.995 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-18 18:44:29.059 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-18 18:44:29.059 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-18 18:44:29.093 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-18 18:44:29.093 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-18 18:44:29.107 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-18 18:44:29.107 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-19 00:20:57.880 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-19 00:20:58.408 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-19 00:20:58.429 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-19 00:20:58.430 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-19 00:20:58.431 ServerApp] Starting buffering for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-19 00:20:58.436 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-19 00:20:58.436 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-19 00:20:58.452 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-19 00:20:58.452 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-19 00:20:58.473 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-19 00:20:58.473 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-19 00:20:58.475 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-19 00:20:58.475 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-19 00:20:58.490 ServerApp] Connecting to kernel 33da374f-e3b9-4143-a139-33aa0f0bd8a6.
+[I 2025-04-19 00:20:58.490 ServerApp] Restoring connection for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-19 00:51:01.001 ServerApp] Starting buffering for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-19 00:51:01.004 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-19 00:51:01.005 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-19 00:51:01.006 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-19 00:51:01.007 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-19 00:51:01.011 ServerApp] Connecting to kernel 33da374f-e3b9-4143-a139-33aa0f0bd8a6.
+[I 2025-04-19 00:51:01.011 ServerApp] Restoring connection for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-19 00:51:01.026 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-19 00:51:01.026 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-19 00:51:01.043 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-19 00:51:01.043 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-19 00:51:01.058 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-19 00:51:01.059 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-19 00:51:01.078 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-19 00:51:01.078 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-20 13:10:16.025 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:12:16.160 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:14:16.273 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:20:16.471 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:22:16.596 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:34:16.718 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:36:16.860 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:54:17.043 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:54:45.017 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:55:22.976 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-20 13:55:27.484 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-20 13:56:45.149 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 13:58:45.309 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-20 14:30:07.717 ServerApp] Starting buffering for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-20 14:30:07.725 ServerApp] Starting buffering for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-20 14:30:07.734 ServerApp] Starting buffering for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-20 14:30:07.735 ServerApp] Starting buffering for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-20 14:30:07.738 ServerApp] Starting buffering for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-20 14:30:07.756 ServerApp] Connecting to kernel ceda745a-bcd3-428e-b4c1-7b818a4fb79b.
+[I 2025-04-20 14:30:07.756 ServerApp] Restoring connection for ceda745a-bcd3-428e-b4c1-7b818a4fb79b:a87738ef-c049-41de-81d2-b0fdc8fbe456
+[I 2025-04-20 14:30:07.805 ServerApp] Connecting to kernel 6fb71a0c-11b0-4e6c-b340-015e44d65513.
+[I 2025-04-20 14:30:07.806 ServerApp] Restoring connection for 6fb71a0c-11b0-4e6c-b340-015e44d65513:4b538e31-b092-4bfd-8270-88e6ecde32f0
+[I 2025-04-20 14:30:07.821 ServerApp] Connecting to kernel 426bd46c-ed13-43cf-b48c-ea3d70b2403c.
+[I 2025-04-20 14:30:07.821 ServerApp] Restoring connection for 426bd46c-ed13-43cf-b48c-ea3d70b2403c:3bad33a4-31d2-45ae-b706-b4318feb9f62
+[I 2025-04-20 14:30:07.845 ServerApp] Connecting to kernel 33da374f-e3b9-4143-a139-33aa0f0bd8a6.
+[I 2025-04-20 14:30:07.856 ServerApp] Restoring connection for 33da374f-e3b9-4143-a139-33aa0f0bd8a6:8b4ac906-4021-4946-9860-35f005427877
+[I 2025-04-20 14:30:07.870 ServerApp] Connecting to kernel 347fac54-ae88-41fa-8393-f3b08a0ff0b9.
+[I 2025-04-20 14:30:07.871 ServerApp] Restoring connection for 347fac54-ae88-41fa-8393-f3b08a0ff0b9:4f487a6e-544a-4a39-9724-fb339807f203
+[I 2025-04-21 09:55:30.879 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 09:57:31.017 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 09:59:31.296 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:01:31.472 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:03:31.595 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:05:32.302 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:07:33.276 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:09:33.393 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:11:33.520 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:12:28.803 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:14:28.923 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:16:01.411 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:16:10.467 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:18:11.286 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:36:32.179 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-21 10:37:26.276 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:39:26.420 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:41:26.540 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:42:03.481 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-21 10:42:05.708 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:44:05.991 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:48:06.109 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:50:06.218 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 10:52:13.761 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-21 10:54:07.277 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:00:09.312 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:02:09.426 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:03:15.924 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-21 11:03:31.754 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-21 11:04:10.402 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:06:10.507 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:06:46.746 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:08:46.859 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:14:46.992 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:16:47.322 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:18:47.440 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:20:47.557 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:22:47.674 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:24:47.793 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:25:40.602 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-21 11:25:48.726 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_mhybrid.py
+[I 2025-04-21 11:26:47.213 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-21 11:26:47.927 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:26:52.866 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/rainseer/spacetime_seperable.py
+[I 2025-04-21 11:32:48.342 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 11:34:57.497 ServerApp] Copying Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_5x5.ipynb to /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr
+[I 2025-04-21 11:35:08.905 ServerApp] Kernel started: a27b374c-32a3-4994-9fb0-d8abccf1126c
+[I 2025-04-21 11:35:09.581 ServerApp] Connecting to kernel a27b374c-32a3-4994-9fb0-d8abccf1126c.
+[I 2025-04-21 11:35:14.200 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 11:35:22.678 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 11:37:22.757 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 12:04:27.464 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:06:27.632 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:12:27.804 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:12:57.266 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:12:59.210 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:14:59.443 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:19:00.420 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:19:25.442 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:21:25.598 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:23:25.769 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:25:25.943 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/mgprs/precip_covariance.ipynb
+[I 2025-04-21 12:25:50.262 ServerApp] Kernel started: 2e4b10a3-91aa-4cf6-aea9-aecd5e817b58
+[I 2025-04-21 12:25:50.786 ServerApp] Connecting to kernel 2e4b10a3-91aa-4cf6-aea9-aecd5e817b58.
+[I 2025-04-21 12:27:26.364 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 12:29:24.628 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 12:29:44.496 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 12:29:55.320 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 12:31:55.397 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 12:42:35.843 ServerApp] AsyncIOLoopKernelRestarter: restarting kernel (1/5), keep random ports
+[W 2025-04-21 12:42:35.857 ServerApp] kernel a27b374c-32a3-4994-9fb0-d8abccf1126c restarted
+python(47492) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+[I 2025-04-21 12:42:36.591 ServerApp] Starting buffering for a27b374c-32a3-4994-9fb0-d8abccf1126c:17eace75-46c0-4591-b7f1-e39c4c078ec3
+[I 2025-04-21 12:42:37.147 ServerApp] Connecting to kernel a27b374c-32a3-4994-9fb0-d8abccf1126c.
+[I 2025-04-21 12:42:37.147 ServerApp] Restoring connection for a27b374c-32a3-4994-9fb0-d8abccf1126c:17eace75-46c0-4591-b7f1-e39c4c078ec3
+[I 2025-04-21 12:45:24.376 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 12:47:24.520 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 12:49:24.639 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 12:51:24.754 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 12:53:24.860 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 12:55:24.964 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 12:57:25.088 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 12:59:25.186 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:01:27.378 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:03:27.487 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:05:27.604 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:07:28.332 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:11:28.466 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:15:28.583 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:17:28.710 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:19:28.815 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:21:28.923 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:23:29.045 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:25:29.143 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:28:27.439 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:30:27.568 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:32:28.382 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:36:29.352 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:38:30.343 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:42:31.342 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:44:32.344 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:46:32.485 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:48:32.601 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb
+[I 2025-04-21 13:49:09.302 ServerApp] Kernel shutdown: 347fac54-ae88-41fa-8393-f3b08a0ff0b9
+[I 2025-04-21 13:49:09.308 ServerApp] Kernel shutdown: 6fb71a0c-11b0-4e6c-b340-015e44d65513
+[I 2025-04-21 13:49:09.311 ServerApp] Kernel shutdown: ceda745a-bcd3-428e-b4c1-7b818a4fb79b
+[I 2025-04-21 13:49:09.313 ServerApp] Kernel shutdown: 426bd46c-ed13-43cf-b48c-ea3d70b2403c
+[I 2025-04-21 13:49:09.314 ServerApp] Kernel shutdown: e072fc79-6a99-4c0b-bbd8-24bddd065951
+[I 2025-04-21 13:49:09.316 ServerApp] Kernel shutdown: f5905edf-d7e4-4f2e-bc82-07b1d35418e3
+[I 2025-04-21 13:49:09.641 ServerApp] Kernel shutdown: a26aed6d-bddd-4873-b417-db6fc124e8a4
+[I 2025-04-21 13:49:09.764 ServerApp] Kernel shutdown: 33da374f-e3b9-4143-a139-33aa0f0bd8a6
+[I 2025-04-21 13:49:09.772 ServerApp] Kernel shutdown: a27b374c-32a3-4994-9fb0-d8abccf1126c
+[I 2025-04-21 13:49:09.990 ServerApp] Kernel shutdown: 2e4b10a3-91aa-4cf6-aea9-aecd5e817b58
+python(49505) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+[I 2025-04-21 13:49:25.216 ServerApp] Kernel started: 0ecea8c3-51f2-4dc6-9c92-232149e05a4d
+[I 2025-04-21 13:49:25.698 ServerApp] Connecting to kernel 0ecea8c3-51f2-4dc6-9c92-232149e05a4d.
+[I 2025-04-21 13:49:27.303 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 13:51:27.373 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 14:01:27.508 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/global_gpr/data_extract_1x1.ipynb
+[I 2025-04-21 14:02:44.312 ServerApp] Starting buffering for 0ecea8c3-51f2-4dc6-9c92-232149e05a4d:df4eddab-dc34-40dd-acfe-83549d3b2777
+[I 2025-04-21 14:02:48.708 ServerApp] Kernel shutdown: 0ecea8c3-51f2-4dc6-9c92-232149e05a4d
+[I 2025-04-21 14:02:58.219 ServerApp] Copying Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_10yrs.ipynb to /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime
+python(49806) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+[I 2025-04-21 14:03:09.764 ServerApp] Kernel started: 74e895e7-5389-4df6-abf4-9d7de262aded
+[I 2025-04-21 14:03:10.286 ServerApp] Connecting to kernel 74e895e7-5389-4df6-abf4-9d7de262aded.
+[I 2025-04-21 14:05:09.957 ServerApp] Saving file at /Macintosh HD/Users/an1009/Ecommons/Analysis/spacetime/cmip6_smoothed_1x1.ipynb
+[I 2025-04-21 14:19:06.746 ServerApp] AsyncIOLoopKernelRestarter: restarting kernel (1/5), keep random ports
+[W 2025-04-21 14:19:06.754 ServerApp] kernel 74e895e7-5389-4df6-abf4-9d7de262aded restarted
+python(50325) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+[I 2025-04-21 14:19:06.858 ServerApp] Starting buffering for 74e895e7-5389-4df6-abf4-9d7de262aded:42432af0-5e23-4144-a5b2-45bcfc28ce13
+[I 2025-04-21 14:19:07.095 ServerApp] Connecting to kernel 74e895e7-5389-4df6-abf4-9d7de262aded.
+[I 2025-04-21 14:19:07.095 ServerApp] Restoring connection for 74e895e7-5389-4df6-abf4-9d7de262aded:42432af0-5e23-4144-a5b2-45bcfc28ce13
+[I 2025-04-21 15:18:31.208 ServerApp] Starting buffering for 74e895e7-5389-4df6-abf4-9d7de262aded:42432af0-5e23-4144-a5b2-45bcfc28ce13
