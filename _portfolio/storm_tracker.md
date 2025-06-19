@@ -4,7 +4,7 @@ excerpt: "Storm Tracker is a real-time weather visualization tool that detects p
 collection: portfolio
 ---
 Storm Tracker is a simplified version of a powerful algorithm I developed called [SCAFET](https://github.com/nbarjun/SCAFET) (short for Scalable Feature Extraction and Tracking). While SCAFET is designed to detect and track a wide range of weather patterns in complex climate data, Storm Tracker focuses specifically on identifying and following storms in real time.
-# [Click here to see the current storms identified by StormTracker](../folium_map.html)
+# [Click here to see the current storms identified by StormTracker](../../files/latest_storms.html)
 
 ### What is SCAFET?
 At its core, SCAFET analyzes the shape of weather patterns, not just their intensity—think of it like applying a geometric filter to reveal features such as cyclones, atmospheric rivers, jet streams, and more. Unlike traditional methods, SCAFET doesn’t rely on preset thresholds or model or dataset-specific assumptions. Instead, it uses something called a shape index to figure out where interesting weather features are happening, no matter which region or dataset you're looking at. For a full explanation of how it works, check out my [article in Geoscientific Model Development](https://gmd.copernicus.org/articles/17/301/2024/). 
