@@ -18,7 +18,7 @@ Here’s how it works:
 * Then, it identifies convex cap-shaped patterns that indicate storm systems.
 * Finally, it filters out the weaker ones and highlights the strongest storms globally.
 
-This analysis is updated every day, and the results are posted right here.
+This analysis is updated every day, and the results are posted right here. The full code for this project is also freely available via [GitHub](https://github.com/nbarjun/stormtracker). Feel free to contact me if you have any questions or feedbacks.
 
 ## Disclaimer
 This is a personal research project by Dr. Arjun Babu Nellikkattil, inspired by his PhD work. It’s not an operational weather forecasting tool—just a hobby and a scientific exploration. Please refer to official weather services for accurate forecasts and warnings related to extreme weather events.
