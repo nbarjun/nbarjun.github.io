@@ -4,4 +4,4 @@ excerpt: "The project aims to create an open-source visualization platform that 
 collection: portfolio
 ---
 
-# [Click here to launch the VAWF](../../files/vawf/index.html)
+# [Click here to launch the VAWF](../../files/vawf/vawf.html)
