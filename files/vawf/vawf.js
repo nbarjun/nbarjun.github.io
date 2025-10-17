@@ -32,7 +32,7 @@ function createVAWFGui(opts = {}) {
   Object.assign(panel.style, {
     position: 'fixed',
     top: '12px',
-    right: '12px',
+    left: '12px',
     width: '300px',
     background: 'rgba(10,10,10,0.85)',
     color: '#fff',
@@ -208,7 +208,7 @@ function createVAWFGui(opts = {}) {
   Object.assign(expandBtn.style, {
     position: 'fixed',
     top: '12px',
-    right: '12px',
+    left: '12px',
     width: '36px',
     height: '36px',
     borderRadius: '50%',
@@ -358,15 +358,68 @@ const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.96);
 scene.add(hemiLight);
 
 // ------------------- Create Colorbar -------------------
+const colorbarContainer = document.createElement('div');
+Object.assign(colorbarContainer.style, {
+  position: 'absolute',
+  zIndex: '15',
+  background: 'rgba(0,0,0,0.5)',
+  padding: '6px',
+  borderRadius: '8px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  transition: 'all 0.3s ease'
+});
+
+document.body.appendChild(colorbarContainer);
+
+// ------------------- Colorbar Image -------------------
 const colorbar = document.createElement('img');
-colorbar.src = './outputs/colorbar_wind_10m.png';
-colorbar.style.position = 'absolute';
-colorbar.style.top = '50%';            // vertical center
-colorbar.style.right = '20px';         // distance from right edge
-colorbar.style.transform = 'translateY(-40%)'; // shift up by half height
-colorbar.style.width = '100px';         // adjust width as needed
-colorbar.style.zIndex = '10';          // ensure above canvas
-document.body.appendChild(colorbar);
+colorbar.style.zIndex = '10';
+colorbar.style.width = '100px';
+colorbar.style.borderRadius = '8px';
+colorbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.4)';
+colorbar.style.transition = 'all 0.3s ease';
+colorbarContainer.appendChild(colorbar);
+
+// ------------------- Minimize Button -------------------
+const minimizeBtn = document.createElement('button');
+minimizeBtn.textContent = '×';
+Object.assign(minimizeBtn.style, {
+  position: 'absolute',
+  top: '-30px',
+  right: '1px',
+  border: 'none',
+  background: 'rgba(0,0,0,0.6)',
+  color: 'white',
+  cursor: 'pointer',
+  borderRadius: '4px',
+  width: '22px',
+  height: '22px',
+  fontSize: '16px',
+  lineHeight: '18px',
+  zIndex: '20',             // Ensure it’s clickable above container
+});
+colorbarContainer.appendChild(minimizeBtn);
+
+// ------------------- Restore Button -------------------
+const restoreBtn = document.createElement('button');
+restoreBtn.textContent = '∘';
+Object.assign(restoreBtn.style, {
+  position: 'absolute',
+  bottom: '20px',
+  right: '20px',
+  border: 'none',
+  background: 'rgba(0,0,0,0.6)',
+  color: 'white',
+  cursor: 'pointer',
+  borderRadius: '6px',
+  padding: '8px 10px',
+  boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
+  display: 'none',
+  zIndex: '25',
+});
+document.body.appendChild(restoreBtn);
 
 // Plot wind Data
 const loader = new THREE.TextureLoader();
@@ -402,7 +455,11 @@ const overlayMesh = new THREE.Mesh(geometry.clone(), overlayMaterial);
 overlayMesh.scale.set(1.001, 1.001, 1.001); // slightly bigger to avoid z-fighting
 scene.add(overlayMesh);
 
-const guiAPI = createVAWFGui({
+let currentOverlay = '10m Wind';
+updateColorbarPosition(currentOverlay);
+window.addEventListener('resize', () => updateColorbarPosition(currentOverlay));
+
+const gui = createVAWFGui({
   initialOverlay: '10m Wind',
 
   // --- Handle overlay selection ---
@@ -516,13 +573,8 @@ function setupPopup(renderer, camera, markerGroup) {
     }
   });
 }
-
 // Call after creating markers
 setupPopup(renderer, camera, markerGroup);
-
-// points.forEach(p => {
-//   addMarkerIcon(p.lat, p.lon, p.name, p.windspeed, p.vorticity, 2.01);
-// });
 
 // ---------- Load and Remove Storms ----------
 async function loadStorms() {
@@ -556,33 +608,60 @@ function removeStorms() {
   console.log("Storm markers removed");
 }
 
-// ✅ Test addLabel with 3D text
-function addLabel(lat, lon, text) {
-  const radius = 2.01; // Earth radius + tiny offset
-  const {x,y,z} = latLonToCartesian(lat,lon,radius)
-  // const pos = new THREE.Vector3(x, y, z);
-
-  const fontLoader = new FontLoader();
-  fontLoader.load(
-    'https://unpkg.com/three@0.77.0/examples/fonts/helvetiker_regular.typeface.json',
-    (font) => {
-      const geometry = new TextGeometry(text, {
-        font: font,
-        size: 0.05,
-        height: 0.02,
-        curveSegments: 1,
-      });
-      const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-      const textMesh = new THREE.Mesh(geometry, material);
-
-      // ✅ Position at the surface
-      textMesh.position.set(x, y, z);
-      scene.add(textMesh);
-    },
-    undefined,
-    (err) => console.error("❌ Font load failed:", err)
-  );
+// ------------------- Function to get filename for orientation -------------------
+function getColorbarForOrientation(basePath) {
+  const isPortrait = window.innerHeight > window.innerWidth;
+  return isPortrait ? basePath.replace(/(\.[^/.]+)$/, '_p$1') : basePath;
 }
+
+// ------------------- Function to update colorbar position & file -------------------
+function updateColorbarPosition(currentOverlay) {
+  const isPortrait = window.innerHeight > window.innerWidth;
+  const baseFile = colorbars[currentOverlay];
+  const orientedFile = getColorbarForOrientation(baseFile);
+  colorbar.src = orientedFile;
+
+  if (isPortrait) {
+    // 📱 Portrait → bottom-centered colorbar
+    Object.assign(colorbarContainer.style, {
+      bottom: '10px',
+      top: '',
+      right: '50%',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      flexDirection: 'row',
+      width: '60%',
+      height: 'auto',
+    });
+    colorbar.style.width = '100%';
+  } else {
+    // 💻 Landscape → right-side centered colorbar
+    Object.assign(colorbarContainer.style, {
+      right: '20px',
+      left: '',
+      top: '50%',
+      bottom: '',
+      transform: 'translateY(-50%)',
+      flexDirection: 'column',
+      width: 'auto',
+      height: 'auto',
+    });
+    colorbar.style.width = '100px';
+  }
+}
+
+// ------------------- Button Behavior -------------------
+minimizeBtn.addEventListener('click', () => {
+  colorbarContainer.style.display = 'none';
+  restoreBtn.style.display = 'block';
+});
+
+restoreBtn.addEventListener('click', () => {
+  colorbarContainer.style.display = 'flex';
+  restoreBtn.style.display = 'none';
+  updateColorbarPosition(currentOverlay);
+});
+
 
 // -------------------- Animate --------------------
 function animate() {
