@@ -1,23 +1,12 @@
 // Import core Three.js library
-// import * as THREE from "three";
 // ✅ Use Three.js module from CDN
 import * as THREE from "https://unpkg.com/three@0.170.0/build/three.module.js";
 // ✅ Use OrbitControls from CDN
 import { OrbitControls } from "https://unpkg.com/three@0.170.0/examples/jsm/controls/OrbitControls.js";
 // ✅ Use CSS2DRenderer from CDN
 import { CSS2DRenderer } from "https://unpkg.com/three@0.170.0/examples/jsm/renderers/CSS2DRenderer.js";
-// ✅ Use FontLoader from CDN
-import { FontLoader } from "https://unpkg.com/three@0.170.0/examples/jsm/loaders/FontLoader.js";
-// ✅ Use TextGeometry from CDN
-import { TextGeometry } from "https://unpkg.com/three@0.170.0/examples/jsm/geometries/TextGeometry.js";
 // Custom utility for drawing GeoJSON data on a sphere
 import { drawThreeGeo } from "./src/threeGeoJSON.js";
-// // Import orbit controls for camera interaction
-// import { OrbitControls } from 'jsm/controls/OrbitControls.js';
-// import { CSS2DRenderer} from 'jsm/renderers/CSS2DRenderer.js';
-
-// import { FontLoader } from 'jsm/loaders/FontLoader.js';
-// import { TextGeometry } from 'jsm/geometries/TextGeometry.js';
 
 // ---------- Clean custom GUI (pure JS) ----------
 function createVAWFGui(opts = {}) {
@@ -173,7 +162,7 @@ function createVAWFGui(opts = {}) {
     zIndex: '9999'
   });
 
-  ['Storms'].forEach(layer => {
+  ['Storms', 'Atmospheric Rivers', 'Upper Level Jets'].forEach(layer => {
     const chk = document.createElement('input');
     chk.type = 'checkbox';
     chk.id = `chk-${layer}`;
@@ -357,6 +346,17 @@ scene.add(ambientLight);
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.96);
 scene.add(hemiLight);
 
+// // --- Load GeoJSON jet lines ---
+// fetch('../jet_lines.geojson')
+// .then(response => response.json())
+// .then(geojson => {
+//   const geo = new GeoJsonGeometry(geojson, 100); // radius = 100 matches sphere
+//   const material = new THREE.LineBasicMaterial({ color: 0x00aaff, linewidth: 2 });
+//   const lines = new THREE.LineSegments(geo, material);
+//   scene.add(lines);
+// })
+// .catch(err => console.error('Error loading GeoJSON:', err));
+
 // ------------------- Create Colorbar -------------------
 const colorbarContainer = document.createElement('div');
 Object.assign(colorbarContainer.style, {
@@ -462,12 +462,12 @@ window.addEventListener('resize', () => updateColorbarPosition(currentOverlay));
 const gui = createVAWFGui({
   initialOverlay: '10m Wind',
 
-  // --- Handle overlay selection ---
   onOverlayChange: (val) => {
     if (overlayTextures[val]) {
       overlayMaterial.map = overlayTextures[val];
-      colorbar.src = colorbars[val];
       overlayMaterial.needsUpdate = true;
+      currentOverlay = val;
+      updateColorbarPosition(val);
     } else {
       console.warn(`Overlay "${val}" not found.`);
     }
@@ -477,6 +477,12 @@ const gui = createVAWFGui({
     switch (layer) {
       case 'Storms':
         enabled ? loadStorms() : removeStorms();
+        break;
+      case 'Upper Level Jets':
+        enabled ? loadUJets() : removeUJets();
+        break;
+      case 'Atmospheric Rivers':
+        enabled ? loadARs() : removeARs();
         break;
     }
   }
@@ -505,17 +511,6 @@ document.body.appendChild(popup);
 
 const markerGroup = new THREE.Group();
 scene.add(markerGroup);
-
-let stormData = [];
-let stormMarkers = [];
-
-fetch('./outputs/storm_properties.json')
-  .then(response => response.json())
-  .then(jsonData => {
-    stormData = jsonData.data;
-    console.log("Storms loaded:", stormData.length);
-  });
-
 
 // Function to add a marker icon to the globe surface
 function addMarkerIcon(lat, lon, windspeed, vorticity, radius = 2.05) {
@@ -567,6 +562,10 @@ function setupPopup(renderer, camera, markerGroup) {
         popup.style.transform = "translate(-50%, -150%)";
         popup.style.left = event.clientX + "px";
         popup.style.top = event.clientY + "px";
+        // // Center the popup on screen
+        // popup.style.left = "50%";
+        // popup.style.top = "50%";
+        // popup.style.transform = "translate(-50%, -50%)";
       }
     } else {
       popup.style.display = "none";
@@ -576,7 +575,9 @@ function setupPopup(renderer, camera, markerGroup) {
 // Call after creating markers
 setupPopup(renderer, camera, markerGroup);
 
+
 // ---------- Load and Remove Storms ----------
+let stormMarkers = [];
 async function loadStorms() {
   if (stormMarkers.length > 0) return; // prevent duplicates
 
@@ -606,6 +607,97 @@ function removeStorms() {
   // Clear array and re-render
   stormMarkers = [];
   console.log("Storm markers removed");
+}
+
+// ---------- Load and Remove Upper Level Jets ----------
+let jetLinesGroup = null;
+
+function loadUJets() {
+  if (jetLinesGroup) {
+    console.log("Jet lines already loaded.");
+    return;
+  }
+
+  fetch("./outputs/jet_lines.geojson")
+    .then(response => response.json())
+    .then(data => {
+      jetLinesGroup = drawThreeGeo({
+        json: data,
+        radius: 2.01,  // slightly above Earth's surface
+        materialOptions: {
+          color: 0x00ffff,       // bright cyan
+          linewidth: 4,
+          opacity: 0.8,
+          transparent: true,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,
+        },
+      });
+
+      jetLinesGroup.name = "JetLines";
+      scene.add(jetLinesGroup);
+      console.log(`✅ Loaded ${data.features.length} jet lines.`);
+    })
+    .catch(err => console.error("❌ Failed to load jet lines:", err));
+}
+
+function removeUJets() {
+  if (jetLinesGroup) {
+    scene.remove(jetLinesGroup);
+    jetLinesGroup.traverse(obj => {
+      if (obj.geometry) obj.geometry.dispose();
+      if (obj.material) obj.material.dispose();
+    });
+    jetLinesGroup = null;
+    console.log("🧹 Removed jet lines from scene.");
+  } else {
+    console.log("ℹ️ No jet lines to remove.");
+  }
+}
+// ---------- Load and Remove Atmospheric Rivers ----------
+let arLinesGroup = null;
+
+function loadARs() {
+  if (arLinesGroup) {
+    console.log("AR lines already loaded.");
+    return;
+  }
+
+  fetch("./outputs/ar_lines.geojson")
+    .then(response => response.json())
+    .then(data => {
+      arLinesGroup = drawThreeGeo({
+        json: data,
+        radius: 2.01,  // slightly above Earth's surface
+        materialOptions: {
+          color: 0x00ffff,       // bright cyan
+          linewidth: 4,
+          opacity: 0.8,
+          transparent: true,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,
+        },
+      });
+
+      arLinesGroup.name = "ARLines";
+      scene.add(arLinesGroup);
+      console.log(`✅ Loaded ${data.features.length} AR lines.`);
+    })
+    .catch(err => console.error("❌ Failed to load AR lines:", err));
+}
+
+function removeARs() {
+  if (arLinesGroup) {
+    scene.remove(arLinesGroup);
+    arLinesGroup.traverse(obj => {
+      if (obj.geometry) obj.geometry.dispose();
+      if (obj.material) obj.material.dispose();
+    });
+    arLinesGroup = null;
+    console.log("🧹 Removed ARs from scene.");
+  } else {
+    console.log("ℹ️ No ARs to remove.");
+  }
 }
 
 // ------------------- Function to get filename for orientation -------------------
@@ -697,4 +789,3 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 // window.addEventListener("click", onClick);
-
