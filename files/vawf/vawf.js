@@ -625,7 +625,7 @@ function loadUJets() {
         json: data,
         radius: 2.01,  // slightly above Earth's surface
         materialOptions: {
-          color: 0x00ffff,       // bright cyan
+          color: 0xFF1FBF,       // bright magenta
           linewidth: 4,
           opacity: 0.8,
           transparent: true,
