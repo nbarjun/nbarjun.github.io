@@ -1,0 +1,45 @@
+---
+title: "Arjun Nellikkattil"
+subtitle: "Climate Scientist"
+image: assets/images/profile.png
+about:
+  template: trestles
+  image-width: 14em
+  image-shape: round
+  links:
+    - icon: orcid
+      text: ORCID
+      href: http://orcid.org/0000-0003-0302-182X
+    - icon: google-scholar
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=UXUeTo0AAAAJ&hl
+    - icon: researchgate
+      text: ResearchGate
+      href: https://www.researchgate.net/profile/Arjun-Nellikkattil
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/nbarjun.bsky.social
+    - icon: github
+      text: GitHub
+      href: https://github.com/nbarjun
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/nbarjun/
+    - icon: envelope
+      text: Email
+      href: mailto:arjun.nellikkattil@georgetown.edu
+---
+
+# Overview
+
+I am a climate scientist and machine learning researcher bridging the gap between statistical data science and real-world climate challenges. 
+
+Currently, I am a Research Fellow at Georgetown University’s **Earth Commons Institute**, where I develop open-source machine learning and Bayesian frameworks to improve long-term climate risk forecasts and hazard emergence detection. My work integrates global climate models, high-performance computing, and spatial statistics to quantify uncertainty across complex climate systems.
+
+Previously, I completed my Ph.D. at the **IBS Center for Climate Physics**, analyzing ultra-high-resolution simulations on global supercomputers to track extreme weather events. Beyond core research, I build open-source tools for climate risk assessment and create high-impact climate data visualizations.
+
+I enjoy collaborating across disciplines, advancing open climate data science, and communicating complex science clearly. Feel free to explore my research or reach out to connect!
+
+# Book an Appointment
+
+<iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ19TKC22-1K_lECx3tnJVYXJtnRFPK-TTN7k6be--9QWg8Ee2bWlWTlgzujczfVcQyC9aI2pQoe" style="border: 0; width: 100%; height: 115vh; min-height: 950px;" frameborder="0" loading="lazy"></iframe>

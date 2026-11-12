@@ -1,0 +1,62 @@
+---
+title: "Publications"
+subtitle: "Peer-reviewed journal articles and research outputs"
+page-layout: article
+toc: false
+---
+
+* **Bayesian‐Belief Direct Policy Search for Adaptive Water Supply Planning With Endogenous Learning**  
+  *Water Resources Research* (2026) [[DOI](https://doi.org/10.1029/2025WR041645)]
+
+---
+
+* **Spatiotemporal Gaussian Process Regression Advances Early Detection of Precipitation Emergence**  
+  *Publication* (2026) [[DOI](https://doi.org/10.22541/essoar.177316552.27117055/v1)]
+
+---
+
+* **Bayesian Direct Policy Search for Adaptive Water Supply Planning with Endogenous Learning**  
+  *Publication* (2025) [[DOI](https://doi.org/10.22541/essoar.176555604.46306655/v1)]
+
+---
+
+* **Anthropogenically Driven Changes in the Carbon to Phosphorus Ratio of Marine Dissolved Organic Matter**  
+  *Global Biogeochemical Cycles* (2024) [[DOI](https://doi.org/10.1029/2023GB008069)]
+
+---
+
+* **Scalable Feature Extraction and Tracking (SCAFET): a general framework for feature extraction from large climate data sets**  
+  *Geoscientific Model Development* (2024) [[DOI](https://doi.org/10.5194/gmd-17-301-2024)]
+
+---
+
+* **Increased amplitude of atmospheric rivers and associated extreme precipitation in ultra-high-resolution greenhouse warming simulations**  
+  *Communications Earth & Environment* (2023) [[DOI](https://doi.org/10.1038/s43247-023-00963-7)]
+
+---
+
+* **Future sea-level projections with a coupled atmosphere-ocean-ice-sheet model**  
+  *Nature Communications* (2023) [[DOI](https://doi.org/10.1038/s41467-023-36051-9)]
+
+---
+
+* **The East Asian Summer Monsoon Response to Global Warming in a High Resolution Coupled Model: Mean and Extremes**  
+  *Asia-Pacific Journal of Atmospheric Sciences* (2023) [[DOI](https://doi.org/10.1007/s13143-022-00285-2)]
+
+---
+
+* **Downscaling Earth System Models with Deep Learning**  
+  *Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining* (2022) [[DOI](https://doi.org/10.1145/3534678.3539031)]
+
+---
+
+* **Scalable Feature Extraction and Tracking (SCAFET): A general framework for feature extraction from large climate datasets**  
+  *Publication* (2022) [[DOI](https://doi.org/10.5194/egusphere-egu22-10823)]
+
+---
+
+* **Prediction of daily sea surface temperature using artificial neural networks**  
+  *International Journal of Remote Sensing* (2018) [[DOI](https://doi.org/10.1080/01431161.2018.1454623)]
+
+---
+

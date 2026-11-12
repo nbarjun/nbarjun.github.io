@@ -1,0 +1,62 @@
+---
+title: "Curriculum Vitae"
+format:
+  html:
+    toc: true
+listing:
+  - id: talks
+    contents: "../talks/*.qmd"
+    template: ../talks/talks.ejs
+    sort: "date desc"
+---
+
+[<i class="bi bi-file-earmark-pdf"></i> Download PDF CV](/assets/cv.pdf){.btn .btn-outline-primary .btn-sm role="button" target="_blank"}
+
+## Education
+
+* **Ph.D. in Climate System** | Pusan National University, South Korea <span style="float:right;">2023</span>
+* **M.S. in Ocean and Atmospheric Sciences** | University of Hyderabad, India <span style="float:right;">2016</span>
+* **B.S. in Physics (Honors)** | Delhi University, India <span style="float:right;">2014</span>
+
+## Research Experience
+
+* **Postdoctoral Researcher** | Earth Commons Institute, Georgetown University <span style="float:right;">2023 – Present</span>
+  * Developing advanced machine learning algorithms to predict long-term changes in precipitation patterns and assess climate risk.
+
+* **Ph.D. Researcher** | Earth System Predictability Lab, IBS Center for Climate Physics <span style="float:right;">2018 – 2023</span>
+  * Investigated atmospheric rivers and their responses to a changing climate using ultra-high-resolution CESM climate models.
+  * Developed a novel algorithm for detecting extreme weather events in large-scale climate datasets.
+  * Co-developed machine learning tools to improve climate data downscaling for higher-resolution projections.
+
+* **Research Assistant** | National Institute of Oceanography, Goa, India <span style="float:right;">2016 – 2017</span>
+  * Mapped Indian Ocean currents using NOAA and INCOIS data, creating a high-resolution ocean current climatology.
+  * Applied artificial neural networks (ANNs) to fill gaps in sea surface temperature (SST) data and predict SST fronts.
+
+* **Summer Intern** | Indian Academy of Sciences, India <span style="float:right;">2015</span>
+  * Analyzed Coastal Ocean Dynamics Application Radar (CODAR) data from the Gulf of Khambhat.
+  * Conducted harmonic analysis to improve tide prediction accuracy.
+
+* **Research Intern** | Interdisciplinary Innovation Project, Delhi University <span style="float:right;">2013</span>
+  * Conducted data analysis and field studies to assess the energy efficiency, light characteristics, and economic feasibility of LEDs.
+
+## Peer-Reviewed Publications
+
+{{< include /publications/publications.qmd >}}
+
+## Presentations & Invited Talks
+
+:::{#talks}
+:::
+
+## Skills
+
+* **Python:** Feature extraction from massive climate datasets (`xarray`, `netCDF4`), ML downscaling frameworks, and Bayesian GP modeling (`GPyTorch`, `PyTorch`).
+* **MATLAB:** Artificial Neural Network (ANN) interpolation techniques for sparse observational data.
+* **R:** Automated scripting workflows for spatial satellite data processing and statistics.
+* **FORTRAN:** Development of algorithms for harmonic analysis and climate model post-processing.
+* **HPC & Containerization:** Cluster environments (Slurm, HPC), Linux shell scripting, Docker, and Singularity containers for scalable computing.
+
+## Service & Leadership
+
+* **Head**, Social Service League (SSL) | St. Stephen's College, Delhi University <span style="float:right;">2013 – 2014</span>
+  * Led student outreach initiatives and organized year-round community service programs.

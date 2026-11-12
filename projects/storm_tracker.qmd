@@ -1,0 +1,108 @@
+---
+title: "Storm Tracker"
+subtitle: "Real-time global storm detection and tracking driven by the SCAFET framework"
+categories: [Extreme Weather, Feature Tracking, Python, ECMWF]
+image: "../assets/stormtracker/latest_storms.png" 
+title-block-banner: true  # Creates a colored header block based on your theme
+page-layout: article
+toc: true
+---
+
+:::{.grid}
+
+:::{.g-col-12 .g-col-md-8}
+### Live Visualization
+
+<iframe src="/assets/stormtracker/latest_storms.html" width="100%" height="480px" style="border: 1px solid #dee2e6; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);"></iframe>
+
+[<i class="bi bi-arrows-angle-expand"></i> Open Fullscreen Map](/assets/stormtracker/latest_storms.html){.btn .btn-outline-primary .btn-sm target="_blank"}
+:::
+
+:::{.g-col-12 .g-col-md-4}
+:::{.card .h-100 .bg-light}
+:::{.card-body}
+#### Project Snapshot
+
+* **Core Engine:** SCAFET Algorithm
+* **Input Data:** ECMWF IFS Daily Wind Forecasts
+* **Update Frequency:** Daily Execution
+* **Primary Metric:** Atmospheric Vorticity & Geometry
+
+---
+
+[<i class="bi bi-github"></i> Storm Tracker Code](https://github.com/nbarjun/stormtracker){.btn .btn-primary .btn-sm .w-100 .mb-2 target="_blank"}
+[<i class="bi bi-file-earmark-text"></i> GMD Paper (SCAFET)](https://gmd.copernicus.org/articles/17/301/2024/){.btn .btn-outline-secondary .btn-sm .w-100 target="_blank"}
+:::
+:::
+:::
+
+:::
+
+---
+
+## Overview
+
+Storm Tracker applies a simplified implementation of **SCAFET** ([Scalable Feature Extraction and Tracking](https://github.com/nbarjun/SCAFET)) to daily wind forecasts, identifying and mapping severe storms globally without manual intervention.
+
+### The Methodology: SCAFET
+
+Unlike traditional detection pipelines that rely on dataset-dependent intensity thresholds, SCAFET analyzes the **underlying geometric structure** of atmospheric phenomena using a mathematical shape index.
+
+| Feature Type | Detection Mechanism |
+| :--- | :--- |
+| **Cyclonic Storms** | Convex cap-shaped surface geometry & vorticity peaks |
+| **Atmospheric Rivers** | Continuous high-moisture spatial corridors |
+| **Jet Streams** | Linear, high-velocity atmospheric bounds |
+
+For complete mathematical definitions, review the [Geoscientific Model Development publication](https://gmd.copernicus.org/articles/17/301/2024/) or my [Ph.D. dissertation](https://www.researchgate.net/publication/391666823_Characteristics_of_Atmospheric_Rivers_of_Past_Present_and_Future).
+
+---
+
+## Operational Workflow
+
+:::{.grid}
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**1. Ingestion & Computation**
+Retrieves daily global wind vectors from the [ECMWF Data Store](https://data.ecmwf.int/forecasts/) and derives global atmospheric vorticity fields.
+:::
+:::
+:::
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**2. Geometric Extraction**
+Applies shape-index filters to isolate convex atmospheric structures characteristic of active storm centers.
+:::
+:::
+:::
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**3. Filtering & Tracking**
+Filters low-amplitude noise to extract, rank, and track high-intensity cyclone trajectories.
+:::
+:::
+:::
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**4. Automated Publishing**
+Renders updated geo-referenced JSON outputs directly to the web dashboard every 24 hours.
+:::
+:::
+:::
+
+:::
+
+---
+
+:::{.callout-warning}
+## Research Disclaimer
+Storm Tracker is an experimental academic prototype developed by Dr. Arjun Babu Nellikkattil. It is **not** an operational safety tool. Refer to official weather entities (e.g., NOAA, ECMWF, or local meteorological services) for safety advisories.
+:::

@@ -1,0 +1,15 @@
+---
+title: "Projects"
+subtitle: "Ongoing and completed research and data science projects"
+listing:
+  contents: "."
+  type: grid
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  page-size: 9
+  image-height: "250px"
+page-layout: full
+title-block-banner: false
+---

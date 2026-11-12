@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Arjun Nellikkattil"
+  site-url: "https://nbarjun.github.io"
+  repo-url: "https://github.com/nbarjun/nbarjun.github.io"
+  navbar:
+    background: primary
+    search: true
+    right:
+      - text: "About"
+        href: index.qmd
+      - text: "Publications"
+        href: publications/publications.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "CV"
+        href: cv/cv.qmd
+      - icon: github
+        href: https://github.com/nbarjun
+
+format:
+  html:
+    theme: lux
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    html-math-method: katex

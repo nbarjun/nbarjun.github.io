@@ -1,0 +1,16 @@
+---
+title: "Blog"
+subtitle: "Tutorials and thoughts on climate data science, ML, and spatial stats"
+listing:
+  contents: "."
+  sort: "date desc"
+  type: default # Options: default, grid, or table
+  image-align: right   # Places the thumbnail next to the title and abstract
+  image-height: "150px"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  page-size: 10
+page-layout: full
+title-block-banner: false
+---

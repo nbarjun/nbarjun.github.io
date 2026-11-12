@@ -1,0 +1,111 @@
+---
+title: "Value Added Weather Forecasts (VAWF)"
+subtitle: "An open-source visualization platform extracting actionable atmospheric features beyond raw weather variables"
+categories: [Weather Forecasting, Feature Extraction, Atmospheric Rivers, Jet Streams, Python]
+image: "../assets/vawf/vawf.png"
+resources:
+  - "../assets/vawf/**"
+title-block-banner: true
+page-layout: article
+toc: true
+---
+
+:::{.grid}
+
+:::{.g-col-12 .g-col-md-8}
+### Live Platform
+
+<iframe src="../assets/vawf/vawf.html" width="100%" height="480px" style="border: 1px solid #dee2e6; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);"></iframe>
+
+[<i class="bi bi-arrows-angle-expand"></i> Open Fullscreen VAWF App](/assets/vawf/vawf.html){.btn .btn-outline-primary .btn-sm target="_blank"}
+:::
+
+:::{.g-col-12 .g-col-md-4}
+:::{.card .h-100 .bg-light}
+:::{.card-body}
+#### Project Snapshot
+
+* **Core Focus:** Advanced Synoptic & Mesoscale Diagnostics
+* **Target Features:** Atmospheric Rivers, Jet Streams, Cyclones
+* **Input Feeds:** Global NWP Forecast Datasets
+* **Access:** Open-Source Interactive Platform
+
+---
+
+[<i class="bi bi-box-arrow-up-right"></i> Launch App](/assets/vawf/vawf.html){.btn .btn-primary .btn-sm .w-100 .mb-2 target="_blank"}
+[<i class="bi bi-github"></i> Repository](https://github.com/nbarjun){.btn .btn-outline-secondary .btn-sm .w-100 target="_blank"}
+:::
+:::
+:::
+
+:::
+
+---
+
+## Overview
+
+Traditional weather portals primarily display raw surface variables like temperature, relative humidity, and 24-hour precipitation accumulation. While informative, these raw fields often obscure the broader synoptic drivers powering severe weather events.
+
+The **Value Added Weather Forecasts (VAWF)** platform bridges this gap by automatically detecting, isolating, and visualizing high-order dynamical features directly from numerical weather prediction (NWP) model outputs.
+
+---
+
+## Key Atmospheric Features Tracked
+
+| Feature | Diagnostic Focus | Practical Significance |
+| :--- | :--- | :--- |
+| **Atmospheric Rivers (ARs)** | Integrated Vapor Transport (IVT) corridors | Extreme precipitation & flood risk assessment |
+| **Jet Streams** | Upper-level velocity fields (250 hPa isotachs) | Steering dynamics & synoptic pattern evolution |
+| **Ongoing Cyclones** | Vorticity centers & surface pressure minima | Tracking storm tracks & severe weather potential |
+| **Precipitation Anomalies** | Departure from historical climatology | Early warning for extreme regional rainfall |
+
+---
+
+## Operational Workflow
+
+:::{.grid}
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**1. Forecast Data Ingestion**
+Automated pipelines fetch daily numerical forecast feeds (ECMWF / GFS) across multi-level atmospheric variables.
+:::
+:::
+:::
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**2. Feature Extraction**
+Applies geometric and thresholding algorithms to extract distinct phenomena (e.g., IVT moisture plumes, jet axes).
+:::
+:::
+:::
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**3. Value-Added Layering**
+Synthesizes complex 3D fields into clean vector-overlay layers for seamless multi-feature comparison.
+:::
+:::
+:::
+
+:::{.g-col-12 .g-col-md-6}
+:::{.card .mb-3}
+:::{.card-body}
+**4. Automated Rendering**
+Generates lightweight HTML/JS web maps updated on schedule for rapid web-based analysis.
+:::
+:::
+:::
+
+:::
+
+---
+
+:::{.callout-warning}
+## Research & Educational Disclaimer
+Value Added Weather Forecasts (VAWF) is an open-source academic research prototype developed by Dr. Arjun Babu Nellikkattil. It is **not** an official operational safety dashboard. Please rely on official government entities (e.g., NOAA NWS, ECMWF, or national meteorological offices) for official weather advisories and emergency warnings.
+:::
