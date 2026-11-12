@@ -376,6 +376,10 @@ document.body.appendChild(colorbarContainer);
 // ------------------- Colorbar Image -------------------
 const colorbar = document.createElement('img');
 colorbar.style.zIndex = '10';
+colorbar.style.width = 'auto';
+colorbar.style.maxHeight = '42vh';  
+colorbar.style.objectFit = 'contain';
+colorbar.style.pointerEvents = 'none'; 
 colorbar.style.width = '100px';
 colorbar.style.borderRadius = '8px';
 colorbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.4)';
