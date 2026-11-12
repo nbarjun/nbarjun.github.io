@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Arjun Nellikkattil">
+<meta name="dcterms.date" content="2025-02-22">
+
+<title>CMIP6 in the Cloud: Smarter, Faster Climate Data Workflows – Arjun Nellikkattil</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cd52f8a3ad44d1427c2cc70d861e6010.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Arjun Nellikkattil</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv/cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/nbarjun"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-youll-learn" id="toc-what-youll-learn" class="nav-link active" data-scroll-target="#what-youll-learn">What You’ll Learn</a></li>
+  <li><a href="#what-youll-need-prerequisites" id="toc-what-youll-need-prerequisites" class="nav-link" data-scroll-target="#what-youll-need-prerequisites">What You’ll Need (Prerequisites)</a></li>
+  <li><a href="#accessing-cmip6-data-from-google-cloud-storage" id="toc-accessing-cmip6-data-from-google-cloud-storage" class="nav-link" data-scroll-target="#accessing-cmip6-data-from-google-cloud-storage">Accessing CMIP6 Data from Google Cloud Storage</a></li>
+  <li><a href="#global-mean-sea-surface-temperature-changes" id="toc-global-mean-sea-surface-temperature-changes" class="nav-link" data-scroll-target="#global-mean-sea-surface-temperature-changes">Global Mean Sea Surface Temperature Changes</a></li>
+  <li><a href="#compute-el-niño-southern-oscillation-present-and-future" id="toc-compute-el-niño-southern-oscillation-present-and-future" class="nav-link" data-scroll-target="#compute-el-niño-southern-oscillation-present-and-future">Compute El Niño Southern Oscillation Present and Future</a></li>
+  <li><a href="#future-rainfall-changes-over-north-america" id="toc-future-rainfall-changes-over-north-america" class="nav-link" data-scroll-target="#future-rainfall-changes-over-north-america">Future Rainfall Changes over North America</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">CMIP6 in the Cloud: Smarter, Faster Climate Data Workflows</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">climate data</div>
+    <div class="quarto-category">CMIP6</div>
+    <div class="quarto-category">future climate</div>
+    <div class="quarto-category">climate projections</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Arjun Nellikkattil </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 22, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Climate change is one of the most urgent challenges facing humanity today. To plan effectively for a changing world, it’s crucial to understand how the climate is shifting and what those changes mean for our environment, economies, and communities. A large part of this understanding comes from climate modeling, most of which is funded by taxpayers and made freely available to the public.</p>
+<p>One of the most important sources of climate model data is the Coupled Model Intercomparison Project (<a href="https://wcrp-cmip.org">CMIP</a>), coordinated by the World Climate Research Programme (<a href="https://www.wcrp-climate.org">WCRP</a>). Now in its sixth phase, CMIP6 provides a standardized framework for climate modeling experiments, bringing together outputs from dozens of models around the world. These simulations are essential for international climate assessments, including reports by the IPCC.</p>
+<p>Although CMIP6 data is open access, working with it has traditionally been challenging due to its sheer size and complexity. With hundreds of variables, dozens of models, multiple future scenarios, and high-resolution spatial and temporal data, it’s easy to feel overwhelmed—especially if you’re new to climate science or don’t have a strong programming background.</p>
+<p>Fortunately, recent advances in tools and platforms have significantly lowered the barrier to entry. You no longer need to download terabytes of data or write complex code to get started. In fact, with a few Python commands and some user-friendly libraries, you can search, subset, and analyze CMIP6 data efficiently—often without downloading the full dataset.</p>
+<p>To understand the structure of CMIP experiments and explore different ways to access the data, I recommend starting with the WCRP’s official <a href="https://wcrp-cmip.org/cmip-data-access/">data access guide</a>. In this tutorial, I’ll walk you through a simple, hands-on approach to accessing CMIP6 climate data using modern Python tools. You’ll learn how to extract just the information you need, perform basic analyses, and even create maps and plots—all with minimal setup. This guide is designed with beginners in mind, but some familiarity with Python will be helpful.</p>
+<section id="what-youll-learn" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-learn">What You’ll Learn</h2>
+<p>By the end of this tutorial, you’ll be able to:</p>
+<ol type="1">
+<li>Analyze <a href="#global-mean-sea-surface-temperature-changes">Global mean Sea Surface Temperature Changes</a>.</li>
+<li><a href="#compute-el-niño-southern-oscillation-present-and-future">Compute El Niño Southern Oscillation present and future periods</a>.</li>
+<li>Evaluate <a href="#future-rainfall-changes-over-north-america">Future rainfall changes over North America</a>.</li>
+</ol>
+<p>A complete version of this tutorial is also available as a <a href="https://github.com/nbarjun/Blog/blob/main/download_cmip6_gcsfs.ipynb">Jupyter Notebook</a>, so you can easily follow along, experiment, and explore at your own pace!</p>
+</section>
+<section id="what-youll-need-prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-need-prerequisites">What You’ll Need (Prerequisites)</h2>
+<p>Don’t worry if you’re not an expert coder—I’ll explain each tool and how it fits into the workflow. But some basic Python knowledge will help. Here’s what you’ll need to install:</p>
+<ol type="1">
+<li>Latest version of <a href="https://www.python.org">Python</a>. Make sure you’re using an up-to-date Python environment.</li>
+<li><a href="https://unidata.github.io/netcdf4-python/">netCDF4</a>: netcdf4 is a Python interface to the netCDF C library.</li>
+<li><a href="https://docs.xarray.dev/en/stable/">Xarray</a>: For working with labeled multi-dimensional arrays—perfect for climate data like temperature, precipitation, or sea level.</li>
+<li><a href="https://pandas.pydata.org/">Pandas</a>: Ideal for handling and analyzing tabular (spreadsheet-like) data formats.</li>
+<li><a href="https://esgf-pyclient.readthedocs.io/en/latest/index.html">Pyesgf</a>: A Python client for searching and downloading CMIP6 data from the Earth System Grid Federation (ESGF).</li>
+<li><a href="https://zarr.dev">Zarr</a>: Enables fast access to chunked and compressed datasets stored in the cloud (especially useful when working with large files).</li>
+<li><a href="https://gcsfs.readthedocs.io/en/latest/">GCSFS</a>: A file system interface for accessing CMIP6 data stored on Google Cloud Storage (GCS).</li>
+<li><a href="https://matplotlib.org">Matplotlib</a>: A classic Python library for creating static plots and graphs.</li>
+<li><a href="https://scitools.org.uk/cartopy/docs/latest/index.html">Cartopy</a>: A mapping library for geospatial data—great for creating climate maps.</li>
+<li><a href="https://tqdm.github.io">Tqdm</a>: Adds a clean, customizable progress bar to your Python loops—especially useful when downloading or processing large datasets.</li>
+<li>Other standard computational libraries like <a href="https://numpy.org/install/">numpy</a> and <a href="https://scipy.org/install/">scipy</a>.</li>
+</ol>
+<p>You’ll find a full list of the libraries and their versions <a href="https://github.com/nbarjun/Blog/blob/main/conda_env_download_cmip6.yml">here</a>. To make your life easier, I suggest using Anaconda environments—it’s the best way to manage installations without running into messy dependency issues. To get started with Conda environments, follow this <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">official tutorial</a>.</p>
+<hr>
+</section>
+<section id="accessing-cmip6-data-from-google-cloud-storage" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-cmip6-data-from-google-cloud-storage">Accessing CMIP6 Data from Google Cloud Storage</h2>
+<p>Import the required packages:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Packages Required to Browse and Analyze CMIP6 Data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyesgf.search <span class="im">import</span> SearchConnection</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> zarr</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gcsfs</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> string <span class="im">import</span> ascii_lowercase</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Packages required for plotting</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.crs <span class="im">as</span> ccrs</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.feature <span class="im">as</span> cfeature</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Set environmental variable for ESGF Search</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">"ESGF_PYCLIENT_NO_FACETS_STAR_WARNING"</span>] <span class="op">=</span> <span class="st">"on"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Once you import all the required packages, connect to the Google server and read all the metadata:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start connection</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> SearchConnection(<span class="st">'[https://esgf-node.llnl.gov/esg-search](https://esgf-node.llnl.gov/esg-search)'</span>, distrib<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read cmip6 metadata</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>cmip6 <span class="op">=</span> pd.read_csv(<span class="st">'[https://storage.googleapis.com/cmip6/cmip6-zarr-consolidated-stores.csv](https://storage.googleapis.com/cmip6/cmip6-zarr-consolidated-stores.csv)'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The metadata looks like this:</p>
+<p><img src="../assets/blog/cmip6_table.png" class="img-fluid" alt="CMIP6 Metadata"></p>
+<p>In the following sections, I’ll show you how to search for specific variables using metadata and efficiently compute different metrics from the data.</p>
+<hr>
+</section>
+<section id="global-mean-sea-surface-temperature-changes" class="level2">
+<h2 class="anchored" data-anchor-id="global-mean-sea-surface-temperature-changes">Global Mean Sea Surface Temperature Changes</h2>
+<p>Let’s start with a simple example. The CMIP6 dataset includes a variable called <em>tosga</em>, which stands for Global Average Sea Surface Temperature. You can browse the full list of available variables in the official <a href="../assets/blog/CMIP6_MIP_tables.xlsx">CMIP6 MIP tables</a>.</p>
+<p>To begin, we’ll extract the metadata—including the file locations—for the monthly mean <em>tosga</em> variable from the CMIP6 archive stored on Google Cloud:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query for all the historical data for the global mean SST</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>hist_files <span class="op">=</span> cmip6.query(<span class="st">"table_id == 'Omon' &amp; variable_id == ['tosga'] </span><span class="op">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="st">                    &amp; experiment_id ==['historical'] &amp; member_id == ['r1i1p1f1']"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The list looks like this:</p>
+<p><img src="../assets/blog/hist_files.png" class="img-fluid" alt="Historical data"></p>
+<p>Similarly, extract the data for SSP5-8.5, which is a high emission scenario:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ssp_files <span class="op">=</span> cmip6.query(<span class="st">"table_id == 'Omon' &amp; variable_id == ['tosga'] </span><span class="op">\</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="st">                    &amp; experiment_id ==['ssp585'] &amp; member_id == ['r1i1p1f1']"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now let’s select those CMIP6 models that have data for historical experiment and future scenarios. This will help us plot a continuous time series:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtain available model names for historical dataset</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>hist_models <span class="op">=</span> np.unique(hist_files[<span class="st">'source_id'</span>])</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtain available model names for SSP-5 8.5 dataset</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ssp_models <span class="op">=</span> np.unique(ssp_files[<span class="st">'source_id'</span>])</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Select models that are present in both Historical and SSP5-8.5 experiments</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>model_names <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(ssp_models) <span class="op">&amp;</span> <span class="bu">set</span>(hist_models))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now that we have the list of models, let’s move on to extracting the data. In the next step, we’ll loop through each model, read both the historical data (1850–2014) and the SSP5-8.5 scenario data (2015–2100), and calculate the annual mean values. After extracting the datasets, we’ll combine them along the time dimension to create a continuous record from 1850 to 2100:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>combined_data <span class="op">=</span> []</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> tqdm(<span class="bu">range</span>(<span class="bu">len</span>(model_names))):</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read the historical data and compute the annual mean</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    hist_data <span class="op">=</span> xr.open_zarr(hist_files[hist_files[<span class="st">'source_id'</span>]<span class="op">\</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                <span class="op">==</span>model_names[i]][<span class="st">'zstore'</span>].item())[<span class="st">'tosga'</span>].groupby(<span class="st">'time.year'</span>).mean(<span class="st">'time'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read the SSP 5-8.5 scenario data</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    ssp_data <span class="op">=</span> xr.open_zarr(ssp_files[ssp_files[<span class="st">'source_id'</span>]<span class="op">\</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                <span class="op">==</span>model_names[i]][<span class="st">'zstore'</span>].item())[<span class="st">'tosga'</span>].sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="st">'2015-01-01'</span>,<span class="st">'2100-12-31'</span>))<span class="op">\</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                .groupby(<span class="st">'time.year'</span>).mean(<span class="st">'time'</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Combine along the time dimension and compute the annual mean</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    combined_data.append(xr.concat([hist_data, ssp_data], dim<span class="op">=</span><span class="st">'year'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Pro Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before running the full loop, test everything with just one model. This allows you to verify that data extraction and transformations function properly before processing the full ensemble.</p>
+</div>
+</div>
+<p>To make computations easier later on, we’ll add the model information directly into the combined dataset. Thanks to how <code>xarray</code> is designed, it uses <a href="https://docs.xarray.dev/en/latest/internals/internal-design.html#lazy-loading">lazy loading</a>—meaning only metadata and coordinates are loaded initially, reading full array contents into memory only upon request:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the data for all CMIP6 models and load the data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>cmip_data <span class="op">=</span> xr.concat(combined_data, dim<span class="op">=</span><span class="st">'models'</span>).load()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the model name information</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>cmip_data <span class="op">=</span> cmip_data.assign_coords({<span class="st">'models'</span>: model_names})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Finally, let’s plot the values:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Divide the colors in the tab20c colorscheme into the length of models</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> plt.cm.tab20c(np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="bu">len</span>(cmip_data.models.values)))</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>models <span class="op">=</span> cmip_data.models.values</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">3</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each model and plot data</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(cmip_data.models.values)):</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    ((cmip_data.sel(models<span class="op">=</span>models[m])))<span class="op">\</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>            .plot(ax<span class="op">=</span>ax, label<span class="op">=</span>models[m], c<span class="op">=</span>colors[m], alpha<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the proper limits along X-axis</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(cmip_data[<span class="st">'year'</span>].values[<span class="dv">0</span>], cmip_data[<span class="st">'year'</span>].values[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'degC'</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>ax.legend(ncols<span class="op">=</span><span class="dv">5</span>, loc<span class="op">=</span><span class="st">'upper left'</span>, fontsize<span class="op">=</span><span class="dv">8</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Global Average Sea Surface Temperature'</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="../assets/blog/global_avg_sst.png" class="img-fluid" alt="Global Average Sea Surface Temperature"></p>
+<hr>
+</section>
+<section id="compute-el-niño-southern-oscillation-present-and-future" class="level2">
+<h2 class="anchored" data-anchor-id="compute-el-niño-southern-oscillation-present-and-future">Compute El Niño Southern Oscillation Present and Future</h2>
+<p>The <a href="https://www.ncei.noaa.gov/access/monitoring/enso/sst">El Niño Southern Oscillation</a> (ENSO) is one of the most influential modes of climate variability, significantly affecting weather and rainfall patterns across the globe. To quantify ENSO, we usually calculate an index based on the anomalous area-averaged sea surface temperature (SST) over the Niño 3.4 region (located roughly between 5°N–5°S latitude and 170°W–120°W longitude).</p>
+<p>Unlike the previous example where we worked with a pre-computed global average, in this case, we need to extract and calculate the ENSO index directly from global SST data. The good news is: we don’t need to download entire datasets to do this. Instead, we can compute the Niño 3.4 average for each time step directly during the data reading process.</p>
+<p>Let’s define a function that reads the surface temperature field, selects the Niño 3.4 region, and calculates the area-weighted average:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> extract_index(ds):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Takes CMIP6 data as input and calculates area-averaged surface </span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">    temperature over the Nino 3.4 region.</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    nino34_ts <span class="op">=</span> ds[<span class="st">'ts'</span>].sel(lat<span class="op">=</span><span class="bu">slice</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), lon<span class="op">=</span><span class="bu">slice</span>(<span class="dv">190</span>, <span class="dv">240</span>)).load()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    nino34_ts <span class="op">=</span> nino34_ts.weighted(np.cos(nino34_ts[<span class="st">'lat'</span>] <span class="op">*</span> np.pi <span class="op">/</span> <span class="dv">180</span>))<span class="op">\</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            .mean(dim<span class="op">=</span>(<span class="st">'lon'</span>, <span class="st">'lat'</span>))</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nino34_ts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Next, retrieve all available data for monthly mean surface temperature (<em>ts</em>) over the Niño 3.4 region from both historical (1850–2014) and SSP5-8.5 (2015–2100) datasets:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Search for historical datasets</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>hist_files <span class="op">=</span> cmip6.query(<span class="st">"table_id == 'Amon' &amp; variable_id == ['ts'] </span><span class="op">\</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">                    &amp; experiment_id ==['historical'] &amp; member_id == ['r1i1p1f1']"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Search for SSP5-8.5 datasets</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ssp_files <span class="op">=</span> cmip6.query(<span class="st">"table_id == 'Amon' &amp; variable_id == ['ts'] </span><span class="op">\</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="st">                    &amp; experiment_id ==['ssp585'] &amp; member_id == ['r1i1p1f1']"</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>ssp_models <span class="op">=</span> np.unique(ssp_files[<span class="st">'source_id'</span>])</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>hist_models <span class="op">=</span> np.unique(hist_files[<span class="st">'source_id'</span>])</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>model_names <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(<span class="bu">set</span>(ssp_models) <span class="op">&amp;</span> <span class="bu">set</span>(hist_models)))</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>combined_data <span class="op">=</span> []</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> tqdm(<span class="bu">range</span>(<span class="bu">len</span>(model_names))):</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read historical data</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    hist_data <span class="op">=</span> xr.open_zarr(hist_files[hist_files[<span class="st">'source_id'</span>]<span class="op">\</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>                <span class="op">==</span>model_names[i]][<span class="st">'zstore'</span>].item())</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Redefine the time axis to assist merging</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    histime <span class="op">=</span> xr.cftime_range(start<span class="op">=</span><span class="st">'1850-01-01'</span>, freq<span class="op">=</span><span class="st">'1MS'</span>, periods<span class="op">=</span><span class="bu">len</span>(hist_data[<span class="st">'time'</span>]))</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    hist_data <span class="op">=</span> hist_data.assign_coords({<span class="st">'time'</span>: histime})<span class="op">\</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>                .sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="st">'1850-01-01'</span>, <span class="st">'2014-12-31'</span>))</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    hist_nino <span class="op">=</span> extract_index(hist_data)</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read SSP5-8.5 data</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    ssp_data <span class="op">=</span> xr.open_zarr(ssp_files[ssp_files[<span class="st">'source_id'</span>]<span class="op">\</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>                    <span class="op">==</span>model_names[i]][<span class="st">'zstore'</span>].item())</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    ssptime <span class="op">=</span> xr.cftime_range(start<span class="op">=</span><span class="st">'2015-01-01'</span>, freq<span class="op">=</span><span class="st">'1MS'</span>, periods<span class="op">=</span><span class="bu">len</span>(ssp_data[<span class="st">'time'</span>]))</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    ssp_data <span class="op">=</span> ssp_data.assign_coords({<span class="st">'time'</span>: ssptime})<span class="op">\</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>                .sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="st">'2015-01-01'</span>, <span class="st">'2099-12-31'</span>))</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    ssp_nino <span class="op">=</span> extract_index(ssp_data)</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>    combined_data.append(xr.concat([hist_nino, ssp_nino], dim<span class="op">=</span><span class="st">'time'</span>))</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine and add models as another coordinate</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>cmip_data <span class="op">=</span> xr.concat(combined_data, dim<span class="op">=</span><span class="st">'models'</span>).assign_coords({<span class="st">'models'</span>: model_names})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Next, calculate the anomaly with respect to a reference period to obtain the ENSO index:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reference period to calculate mean climatology</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>refperiod <span class="op">=</span> <span class="bu">slice</span>(<span class="st">'1850-01-01'</span>, <span class="st">'1949-12-31'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate temperature anomaly</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>nino_anom <span class="op">=</span> cmip_data.groupby(<span class="st">'time.month'</span>) <span class="op">-</span> cmip_data.sel(time<span class="op">=</span>refperiod)<span class="op">\</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                                .groupby(<span class="st">'time.month'</span>).mean(<span class="st">'time'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Plot the raw temperature anomaly time series:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> plt.cm.tab20c(np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="bu">len</span>(cmip_data.models.values)))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>models <span class="op">=</span> cmip_data.models.values</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">3</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(cmip_data.models.values)):</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    ((nino_anom.rolling(time<span class="op">=</span><span class="dv">3</span>, center<span class="op">=</span><span class="va">True</span>).mean(<span class="st">'time'</span>).sel(models<span class="op">=</span>models[m])))<span class="op">\</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>            .plot(ax<span class="op">=</span>ax, label<span class="op">=</span>models[m], c<span class="op">=</span>colors[m], alpha<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Nino 3.4 Index'</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'degC'</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(cmip_data[<span class="st">'time'</span>].values[<span class="dv">0</span>], cmip_data[<span class="st">'time'</span>].values[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>ax.legend(ncols<span class="op">=</span><span class="dv">5</span>, loc<span class="op">=</span><span class="st">'upper left'</span>, fontsize<span class="op">=</span><span class="dv">8</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="../assets/blog/nino_anomaly.png" class="img-fluid" alt="Nino 3.4 TS anomaly"></p>
+<p>Optionally, we can detrend the surface temperature anomalies to remove the underlying long-term warming trend caused by climate change. This isolates natural variability from the background global warming signal. We apply a 4th-order polynomial trend removal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> polynomial_detrend(data):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Applies a 4th order polynomial detrending.</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    pcoef <span class="op">=</span> np.polyfit(np.arange(<span class="bu">len</span>(data)), data, deg<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    ptrend <span class="op">=</span> np.polyval(pcoef.T, np.arange(<span class="bu">len</span>(data)))</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data <span class="op">-</span> ptrend</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply detrending to obtain the ENSO Index</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>nino_index <span class="op">=</span> xr.apply_ufunc(polynomial_detrend, nino_anom,<span class="op">\</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>            vectorize<span class="op">=</span><span class="va">True</span>, input_core_dims<span class="op">=</span>[[<span class="st">'time'</span>]],<span class="op">\</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>            output_core_dims<span class="op">=</span>[[<span class="st">'time'</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Plotting the detrended Niño 3.4 index:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> plt.cm.tab20c(np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="bu">len</span>(cmip_data.models.values)))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>models <span class="op">=</span> cmip_data.models.values</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">3</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(cmip_data.models.values)):</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    ((nino_index.rolling(time<span class="op">=</span><span class="dv">3</span>, center<span class="op">=</span><span class="va">True</span>).mean(<span class="st">'time'</span>).sel(models<span class="op">=</span>models[m])))<span class="op">\</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>            .plot(ax<span class="op">=</span>ax, label<span class="op">=</span>models[m], c<span class="op">=</span>colors[m], alpha<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Nino 3.4 Index (Detrended)'</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'degC'</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(cmip_data[<span class="st">'time'</span>].values[<span class="dv">0</span>], cmip_data[<span class="st">'time'</span>].values[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>ax.legend(ncols<span class="op">=</span><span class="dv">5</span>, loc<span class="op">=</span><span class="st">'upper left'</span>, fontsize<span class="op">=</span><span class="dv">8</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="../assets/blog/detrended_nino.png" class="img-fluid" alt="Detrended Niño 3.4 anomaly"></p>
+<hr>
+</section>
+<section id="future-rainfall-changes-over-north-america" class="level2">
+<h2 class="anchored" data-anchor-id="future-rainfall-changes-over-north-america">Future Rainfall Changes over North America</h2>
+<p>Precipitation (<em>pr</em>) is a key multidimensional driver for climate impact assessments. Because climate models utilize different native grids, we regrid (interpolate) all fields to a standardized 2.5° × 2.5° grid.</p>
+<p>Query precipitation data for historical and SSP5-8.5 scenarios:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>hist_files <span class="op">=</span> cmip6.query(<span class="st">"table_id == 'Amon' &amp; variable_id == ['pr'] </span><span class="op">\</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="st">                    &amp; experiment_id ==['historical'] &amp; member_id == ['r1i1p1f1']"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>ssp_files <span class="op">=</span> cmip6.query(<span class="st">"table_id == 'Amon' &amp; variable_id == ['pr'] </span><span class="op">\</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="st">                    &amp; experiment_id ==['ssp585'] &amp; member_id == ['r1i1p1f1']"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>ssp_models <span class="op">=</span> np.unique(ssp_files[<span class="st">'source_id'</span>])</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>hist_models <span class="op">=</span> np.unique(hist_files[<span class="st">'source_id'</span>])</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>model_names <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(ssp_models) <span class="op">&amp;</span> <span class="bu">set</span>(hist_models))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Define the regridding function and construct the target reference grid:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> regrid_to_target(source_da, target_da):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Interpolates source DataArray onto target grid coordinates.</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> source_da.interp_like(target_da)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Construct dummy target grid</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>lon <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">360</span>, <span class="fl">2.5</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">90</span>, <span class="dv">91</span>, <span class="fl">2.5</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>dummy_data <span class="op">=</span> np.zeros([<span class="bu">len</span>(lon), <span class="bu">len</span>(lat)])</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>target_grid <span class="op">=</span> xr.DataArray(dummy_data, coords<span class="op">=</span>{<span class="st">'lon'</span>: lon, <span class="st">'lat'</span>: lat})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Iterate over each model, extract the North American region, interpolate onto the target grid, and concatenate:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatial domain bounding box for North America</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>latslice <span class="op">=</span> <span class="bu">slice</span>(<span class="dv">0</span>, <span class="dv">90</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>lonslice <span class="op">=</span> <span class="bu">slice</span>(<span class="dv">180</span>, <span class="dv">360</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>combined_data <span class="op">=</span> []</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> tqdm(<span class="bu">range</span>(<span class="bu">len</span>(model_names))):</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read Historical Data</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    hist_data <span class="op">=</span> xr.open_zarr(hist_files[hist_files[<span class="st">'source_id'</span>]<span class="op">\</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>                <span class="op">==</span>model_names[i]][<span class="st">'zstore'</span>].item())[<span class="st">'pr'</span>]</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    histime <span class="op">=</span> xr.cftime_range(start<span class="op">=</span><span class="st">'1850-01-01'</span>, freq<span class="op">=</span><span class="st">'1MS'</span>, periods<span class="op">=</span><span class="bu">len</span>(hist_data[<span class="st">'time'</span>]))</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    hist_data <span class="op">=</span> hist_data.assign_coords({<span class="st">'time'</span>: histime})<span class="op">\</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>                .sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="st">'1850-01-01'</span>, <span class="st">'2015-12-31'</span>))</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    hist_idata <span class="op">=</span> regrid_to_target(hist_data.sel(lat<span class="op">=</span>latslice, lon<span class="op">=</span>lonslice),<span class="op">\</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>                          target_grid.sel(lat<span class="op">=</span>latslice, lon<span class="op">=</span>lonslice))</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read SSP5-8.5 Data</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    ssp_data <span class="op">=</span> xr.open_zarr(ssp_files[ssp_files[<span class="st">'source_id'</span>]<span class="op">\</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>                    <span class="op">==</span>model_names[i]][<span class="st">'zstore'</span>].item())[<span class="st">'pr'</span>]</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    ssptime <span class="op">=</span> xr.cftime_range(start<span class="op">=</span><span class="st">'2015-01-01'</span>, freq<span class="op">=</span><span class="st">'1MS'</span>, periods<span class="op">=</span><span class="bu">len</span>(ssp_data[<span class="st">'time'</span>]))</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    ssp_data <span class="op">=</span> ssp_data.assign_coords({<span class="st">'time'</span>: ssptime})<span class="op">\</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>                .sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="st">'2016-01-01'</span>, <span class="st">'2099-12-31'</span>))</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    ssp_idata <span class="op">=</span> regrid_to_target(ssp_data.sel(lat<span class="op">=</span>latslice, lon<span class="op">=</span>lonslice),<span class="op">\</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>                        target_grid.sel(lat<span class="op">=</span>latslice, lon<span class="op">=</span>lonslice))</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>    combined_data.append(xr.concat([hist_idata, ssp_idata], dim<span class="op">=</span><span class="st">'time'</span>))</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine model array</span></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>cmip_data <span class="op">=</span> xr.concat(combined_data, dim<span class="op">=</span><span class="st">'models'</span>).assign_coords({<span class="st">'models'</span>: model_names})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Split the data into historical, present, and future epochs to evaluate seasonal climatology:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>hslice <span class="op">=</span> <span class="bu">slice</span>(<span class="st">'1980-01-01'</span>, <span class="st">'2009-12-31'</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>pslice <span class="op">=</span> <span class="bu">slice</span>(<span class="st">'2011-01-01'</span>, <span class="st">'2040-12-31'</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>fslice <span class="op">=</span> <span class="bu">slice</span>(<span class="st">'2070-01-01'</span>, <span class="st">'2099-12-31'</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate seasonal climatology per window</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>hclim <span class="op">=</span> cmip_data.sel(time<span class="op">=</span>hslice).groupby(<span class="st">'time.season'</span>).mean(<span class="st">'time'</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>pclim <span class="op">=</span> cmip_data.sel(time<span class="op">=</span>pslice).groupby(<span class="st">'time.season'</span>).mean(<span class="st">'time'</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>fclim <span class="op">=</span> cmip_data.sel(time<span class="op">=</span>fslice).groupby(<span class="st">'time.season'</span>).mean(<span class="st">'time'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Generate orthographic spatial anomaly projections using Cartopy:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams.update({<span class="st">'font.size'</span>: <span class="dv">4</span>})</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">3</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">300</span>, frameon<span class="op">=</span><span class="va">False</span>,<span class="op">\</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>            subplot_kw<span class="op">=</span>{<span class="st">'projection'</span>: ccrs.NearsidePerspective(central_longitude<span class="op">=</span><span class="fl">260.0</span>,<span class="op">\</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                        central_latitude<span class="op">=</span><span class="fl">45.0</span>, satellite_height<span class="op">=</span><span class="fl">4e6</span>)})</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> ax.flatten()</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>plotd <span class="op">=</span> [</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    hclim.mean(dim<span class="op">=</span>(<span class="st">'models'</span>, <span class="st">'season'</span>)),</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    (pclim <span class="op">-</span> hclim).mean(dim<span class="op">=</span>(<span class="st">'models'</span>, <span class="st">'season'</span>)),</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    (fclim <span class="op">-</span> hclim).mean(dim<span class="op">=</span>(<span class="st">'models'</span>, <span class="st">'season'</span>)),</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    hclim.sel(season<span class="op">=</span><span class="st">'JJA'</span>).mean(<span class="st">'models'</span>),</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    (pclim <span class="op">-</span> hclim).sel(season<span class="op">=</span><span class="st">'JJA'</span>).mean(<span class="st">'models'</span>),</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    (fclim <span class="op">-</span> hclim).sel(season<span class="op">=</span><span class="st">'JJA'</span>).mean(<span class="st">'models'</span>),</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    hclim.sel(season<span class="op">=</span><span class="st">'DJF'</span>).mean(<span class="st">'models'</span>),</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    (pclim <span class="op">-</span> hclim).sel(season<span class="op">=</span><span class="st">'DJF'</span>).mean(<span class="st">'models'</span>),</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    (fclim <span class="op">-</span> hclim).sel(season<span class="op">=</span><span class="st">'DJF'</span>).mean(<span class="st">'models'</span>)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>levs <span class="op">=</span> [np.arange(<span class="dv">0</span>, <span class="fl">15.1</span>, <span class="fl">.25</span>), np.arange(<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.6</span>, <span class="fl">.05</span>), np.arange(<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.6</span>, <span class="fl">.05</span>)] <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>titles <span class="op">=</span> [<span class="st">'Hist. Mean'</span>, <span class="st">'Present Climate'</span>, <span class="st">'Future Climate'</span>]</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>pl <span class="op">=</span> []</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(ax)):</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    pl.append((plotd[a] <span class="op">*</span> <span class="dv">86400</span>).plot.contourf(ax<span class="op">=</span>ax[a], transform<span class="op">=</span>ccrs.PlateCarree(),<span class="op">\</span></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>                    add_colorbar<span class="op">=</span><span class="va">False</span>, levels<span class="op">=</span>levs[a]))</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    ax[a].text(<span class="fl">.1</span>, <span class="fl">.9</span>, <span class="ss">f'(</span><span class="sc">{</span>ascii_lowercase[a]<span class="sc">}</span><span class="ss">)'</span>,<span class="op">\</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>               transform<span class="op">=</span>ax[a].transAxes, va<span class="op">=</span><span class="st">'center'</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    ax[a].coastlines(lw<span class="op">=</span><span class="fl">.25</span>, resolution<span class="op">=</span><span class="st">'50m'</span>)</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    ax[a].add_feature(cfeature.BORDERS, lw<span class="op">=</span><span class="fl">.2</span>)</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    ax[a]._frameon <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>    ax[a].set_title(<span class="st">''</span>)</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(wspace<span class="op">=</span><span class="dv">0</span>, hspace<span class="op">=-</span><span class="fl">.05</span>)</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>    ax[a].set_title(titles[a], fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>stitles <span class="op">=</span> [<span class="st">'Annual Mean'</span>, <span class="st">'Summer (JJA)'</span>, <span class="st">'Winter (DJF)'</span>]</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> np.arange(<span class="dv">0</span>, <span class="bu">len</span>(ax), <span class="dv">3</span>):</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>    ax[a].text(<span class="op">-</span><span class="fl">0.05</span>, <span class="fl">.5</span>, stitles[a <span class="op">//</span> <span class="dv">3</span>], transform<span class="op">=</span>ax[a].transAxes,<span class="op">\</span></span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>              rotation<span class="op">=</span><span class="dv">90</span>, va<span class="op">=</span><span class="st">'center'</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>cb_pos <span class="op">=</span> ax[<span class="op">-</span><span class="dv">3</span>].get_position()</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>pos_cax <span class="op">=</span> fig.add_axes([cb_pos.x0, cb_pos.y0 <span class="op">-</span> <span class="fl">.02</span>, cb_pos.width, cb_pos.height <span class="op">/</span> <span class="dv">20</span>])</span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>cb <span class="op">=</span> plt.colorbar(pl[<span class="dv">0</span>], cax<span class="op">=</span>pos_cax, orientation<span class="op">=</span><span class="st">'horizontal'</span>, ticks<span class="op">=</span>levs[<span class="dv">0</span>][::<span class="dv">8</span>])</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>cb.minorticks_off()</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>cb.set_label(<span class="st">'mm/day'</span>)</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>cb_pos <span class="op">=</span> ax[<span class="op">-</span><span class="dv">1</span>].get_position()</span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>pos_cax <span class="op">=</span> fig.add_axes([cb_pos.x0 <span class="op">-</span> cb_pos.width <span class="op">/</span> <span class="dv">2</span>, cb_pos.y0 <span class="op">-</span> <span class="fl">.02</span>, cb_pos.width, cb_pos.height <span class="op">/</span> <span class="dv">20</span>])</span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>cb <span class="op">=</span> plt.colorbar(pl[<span class="op">-</span><span class="dv">1</span>], cax<span class="op">=</span>pos_cax, orientation<span class="op">=</span><span class="st">'horizontal'</span>, ticks<span class="op">=</span>levs[<span class="op">-</span><span class="dv">1</span>][::<span class="dv">10</span>])</span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>cb.minorticks_off()</span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>cb.set_label(<span class="st">'mm/day'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="../assets/blog/seasonal_precipitation_changes.png" class="img-fluid" alt="Seasonal Precipitation Anomalies"></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nbarjun\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

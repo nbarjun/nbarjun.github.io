@@ -1,0 +1,23 @@
+/* Custom typography & LaTeX formula visibility tweaks for Lux */
+body {
+    font-weight: 400;
+    color: #2b2b2b;
+  }
+  
+  /* Ensure math expressions stand out cleanly */
+  .katex-display {
+    padding: 1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  /* Accent link styling */
+  a {
+    color: #1a252f;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  
+  a:hover {
+    color: #2c3e50;
+  }
